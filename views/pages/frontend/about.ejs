@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>About us</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" type="text/css"  href="/plugins/bootstrap.css">
+    <link rel="stylesheet" type="text/css"  href="/plugins/fonts.css">
+    <link rel="stylesheet"  type="text/css"  href="/css/style.css">
+    <link rel="stylesheet" href="/plugins/about.css">
+    <style>
+      bg-primary-darkens{
+        background-color: black;
+      }
+ #cntct{
+  color: white;
+ }
+h5,h6{
+  font-family: 'FAMILY_NAME';
+  font-style: NORMAL_OR_ITALIC;
+  font-weight: NUMERIC_WEIGHT_VALUE;
+  src: url(FONT_FILE_NAME.woff2) format('woff2');
+  color: #666d8a;
+}
+    </style>
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page">
+      <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="" alt="" height="0"/></a>
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-minimal" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="#"><img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"/></a>
+                </div>
+                <%- include('../../nav_partials/nav') %>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs -->
+      <% for(var i=0; i < data.length; i++ ) { %>
+      <section class="breadcrumbs-custom bg-image context-dark" style="background-image: url('/images/upload_about_images/<%= data[i].image%>');">
+        <div class="breadcrumbs-custom-inner">
+          <div class="container breadcrumbs-custom-container">
+            <div class="breadcrumbs-custom-main">
+              <h3 class="breadcrumbs-custom-subtitle title-decorated"><%= data[i].title%></h3>
+              <!-- <h1 class="breadcrumbs-custom-title">                
+           Lashkson</h1> -->
+
+            </div>
+            <ul class="breadcrumbs-custom-path">
+                <li><%= data[i].founder
+                  
+                  %>
+                </li><br>
+              <!-- <li><a href="index.html">Home</a></li> -->
+              <!-- <li class="active">About us</li> -->
+            </ul>
+          </div>
+        </div>
+      </section>
+      <% } %>
+
+
+    
+      <!-- Base typography-->
+      <section class="section section-sm section-first" style="text-align:justify ;">
+        <div class="container">
+          <div class="row row-50">
+            <div class="col-md-6">
+              <div class="all"  >
+              <ul class="list-xl" >
+                <li>
+                  <h1>About us</h1>
+                  <p>
+                    <h6>
+                    • IPT is an established privately owned mechanical and heavy 
+                    engineering contractor founded over 15 years ago. Over the last -15 
+                    years, the company's involvement within the Maintenance, Fabrication 
+                    of structure and tanks and project sectors. Has increased tothe point 
+                    where we are now regarded as one of the top mechanical contractors 
+                    in the industry with ongoing contracts in potable in contracting field, 
+                    for both limited and private limited sectors, locally and nationally.</h6>
+
+
+                    <br>
+                    <h5>
+                    • As industry figures suggest, IPT is a little different to most other 
+                    operations of a similar size and nature. IPT invests a high degree of 
+                    emphasis and resources in its project management and engineering
+                    operations.</h5>
+
+                    <br> 
+                    <h6>
+                    • IPT has a broad base of engineering staff including specialist 
+                    Maintenance Team, Fabrication team, Manufacture Team, structure 
+                    fabrication team and Erection team and formally qualified project
+                    managers and other staff. Their skills are typically applied in the
+                    following areas: </h5><br>
+                  <!-- <h6>   All Type of turnkey basis Mechanical and Chemical project installation.</h6>
+                     Maintenance of all chemical Plant e.g. pumps, motor, gear Box, valves,
+                    static and rotary equipment.
+                     Fabrication, machining, assembly.
+                     Fabrication of S.S. Tank and M.S. Tank.
+                     HDPE / PPFRP work.
+                     Project Control and planning using Microsoft Project and job cost
+                    management systems.
+                     Design and Detailing of Pressure and None pressure equipment, e.g.
+                    tanks, vessels, process column and Heat Exchanger etc.
+                     Development of work methodologies, weld procedures and statutory
+                    compliance documentation.
+                     Health and Safety documentation and implementation.
+
+                    <br>
+                    • <h5> IPT has a staff of around 90 people including
+                    engineering/technical trades and administration. This gives us the
+                    flexibility in providing people to meet the need for the short-term 
+                    increases in site numbers during special situations - changeovers etc.
+                    IPT has a strong reputation as being a competent and professional
+                    project management contracting company.</h5> -->
+                
+                </p>
+                </li>
+              
+              </ul>
+            </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+                <div class="bauer-spacer clearfix" data-desktop="55" data-mobi="40" data-smobi="40" style="height:55px"></div><div class="bauer-simple-image text-center" >
+                  <div class="col-md-12">   <img alt="image" src="/images/pexels-dan-bridge-7000440.jpg"> </div>
+                 
+                  </div></div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Expertise -->
+        <section class="section bg-gray-100">
+          <div class="range justify-content-xl-between">
+            <div class="cell-lg-6 cell-xl-5 align-self-center container">
+              <div class="row">
+                <div class="col-md-10 cell-inner">
+                  <div class="section-lg inset-right-2">
+                    <h3 class="wow-outer"><span class="wow slideInDown">OUR SKILL AND EXPERTISE
+                    </span></h3>
+                    <!-- <h4 class="wow fadeIn">Expertise, discipline and precision</h1> -->
+                    <p class="wow fadeIn">IPT has a staff of around 90 people including
+                      engineering/technical trades and administration. This gives us the
+                      flexibility in providing people to meet the need for the short-term 
+                      increases in site numbers during special situations - changeovers etc.
+                      IPT has a strong reputation as being a competent and professional
+                      project management contracting company.
+  
+                    </p>
+                    <div class="progress-linear-outer wow-outer">
+                            <!-- Linear progress bar-->
+                            <article class="progress-linear wow slideInDown" data-wow-delay=".05s">
+                              <div class="progress-header">
+                              <p>Architecture</p><span class="progress-value">92</span>
+                              </div>
+                              <div class="progress-bar-linear-wrap">
+                              <div class="progress-bar-linear"></div>
+                              </div>
+                            </article>
+                    </div>
+                    <div class="progress-linear-outer wow-outer">
+                            <!-- Linear progress bar-->
+                            <article class="progress-linear progress-linear-color-1 wow slideInDown" data-wow-delay="0.10s">
+                              <div class="progress-header">
+                                <p>Building</p><span class="progress-value">95</span>
+                              </div>
+                              <div class="progress-bar-linear-wrap">
+                                <div class="progress-bar-linear"></div>
+                              </div>
+                            </article>
+                    </div>
+                    <div class="progress-linear-outer wow-outer">
+                            <!-- Linear progress bar-->
+                            <article class="progress-linear progress-linear-color-2 wow slideInDown" data-wow-delay=".15s">
+                              <div class="progress-header">
+                                <p>Construction</p><span class="progress-value">96</span>
+                              </div>
+                              <div class="progress-bar-linear-wrap">
+                                <div class="progress-bar-linear"></div>
+                              </div>
+                            </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell-lg-6 height-fill">
+              <div class="figure-card">
+                <div class="figure-card-sizer"></div><img src="/images/pexels-uğur-bozdoğan-5759611.jpg" alt="" width="960" height="762"/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-xs bg-primary-darkens text-center" style="background-color: black;">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-sm-10 col-md-12">
+                <div class="box-cta-thin">
+                  <h4 id="cntct" class="title wow-outer"><span class="wow slideInRight">Helping Business Owners Worldwide</span></h4>
+                  <div class="wow-outer button-outer"><a class="button button-white-outline button-winona wow slideInLeft" href="/contact">Get in Touch</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<!-- Testimonials  -->
+        <section class="testimonial text-center">
+          <div class="container">
+  
+              <div class="heading white-heading">
+                  Testimonial
+              </div>
+              <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+               
+                  <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item active">
+                          <div class="testimonial4_slide">
+                              <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                              <h4>Client 1</h4>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="testimonial4_slide">
+                              <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" /><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                              <h4>Client 2</h4>
+                          </div>
+                      </div>
+                      <div class="carousel-item">
+                          <div class="testimonial4_slide">
+                              <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                              <h4>Client 3</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                  </a>
+              </div>
+          </div>
+      </section>
+        
+      <!-- Blockquote-->
+
+      <!-- HTML Text Elements-->
+ 
+      <!-- Unordered List-->
+    
+      <!-- Ordered List-->
+    
+      <!-- Centered image-->
+      <!-- <section class="section section-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-xl-8">
+              <!-- <h6>Centered image</h6> -->
+              <!-- <figure class="figure-light"><img class="img-centered" src="/images/fabrication shop.png" alt="" width="770" height="456"/>
+                <figcaption>
+                  <!-- <p>Our Team</p> -->
+                <!-- </figcaption>
+              </figure>
+              <p>FABRICATION SHOP, LOCATION AT INDORE ( M.P.)</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      
+      <!-- Left aligned image-->
+      <!-- <section class="section section-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-xl-8">
+              <!-- <h6>Left aligned image</h6> -->
+              <!-- <div class="row row-30">
+                <div class="col-md-6"><img src="/images/working staff.png" alt="" width="770" height="456"/>
+                </div>
+                <div class="col-md-6">
+                  <p>PHOTO OF WORKING STAFF AT MACHINE SHOP AND FABRICATION SHOP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+      
+      <!-- Right aligned image-->
+      <!-- <section class="section section-sm section-last">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-10 col-xl-8">
+         
+              <div class="row row-30 flex-md-row-reverse">
+                <div class="col-md-6"><img src="/images/working staff2.png" alt="" width="770" height="456"/>
+                </div>
+                <div class="col-md-6">
+                    <p>PHOTO OF WORKING STAFF AT MACHINE SHOP AND FABRICATION SHOP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- Page Footer--><a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="" alt="" height="0"/></a>
+      <footer class="section footer-minimal bg-primary-darken">
+        <div class="container"> 
+          <div class="footer-minimal-inner"><a class="brand" href="/main"><img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"/></a>
+            <!-- Rights-->
+           
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. LASHKSON </p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <div class="preloader"> 
+
+      <div class="preloader-logo">
+        <img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"
+       
+      </div>
+      <!-- <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        
+        </div>
+      </div> -->
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" target="_blank" class="ui-to-top fa fa-whatsapp active"></a>
+  </body>
+</html>

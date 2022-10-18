@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Contact Us</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
+    <link rel="stylesheet" type="text/css"  href="/plugins/bootstrap.css">
+    <link rel="stylesheet" type="text/css"  href="/plugins/fonts.css">
+    <link rel="stylesheet"  type="text/css"  href="/css/style.css">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page">
+        <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="" alt="" height="0"/></a>
+        <header class="section page-header">
+          <!-- RD Navbar-->
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-minimal" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+              <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                  <!-- RD Navbar Panel-->
+                  <div class="rd-navbar-panel">
+                    <!-- RD Navbar Toggle-->
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+                    <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="3"><img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"/></a>
+                  </div>
+                  <%- include('../../nav_partials/nav') %>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+       
+    <section class="section bg-gray-100">
+        <div class="range justify-content-xl-between">
+          <div class="cell-xl-6 align-self-center container">
+            <div class="row">
+              <div class="col-lg-9 cell-inner">
+                <div class="section-lg">
+                  <h3 class="wow-outer"><span class="wow slideInDown" style="visibility: visible; animation-name: slideInDown;">Contact Us</span></h3>
+                  <!-- RD Mailform-->
+                  <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="/getConnected" novalidate="novalidate">
+                    <div class="row row-10">
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp" style="visibility: visible; animation-name: fadeSlideInUp;">
+                          <label class="form-label-outside" for="contact-first-name">First Name</label>
+                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-first-name" type="text" name="firstname" data-constraints="@Required"><span class="form-validation"></span>
+                        </div>
+                      </div>
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp" style="visibility: visible; animation-name: fadeSlideInUp;">
+                          <label class="form-label-outside" for="contact-last-name">Last Name</label>
+                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-last-name" type="text" name="lastname" data-constraints="@Required"><span class="form-validation"></span>
+                        </div>
+                      </div>
+                      <div class="col-md-12 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp" style="visibility: visible; animation-name: fadeSlideInUp;">
+                          <label class="form-label-outside" for="contact-email">E-mail</label>
+                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-email" type="email" name="youremail" data-constraints="@Email @Required"><span class="form-validation"></span>
+                        </div>
+                      </div>
+                      <!-- <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp" style="visibility: visible; animation-name: fadeSlideInUp;">
+                          <label class="form-label-outside" for="contact-phone">Phone</label>
+                          <input class="form-input form-control-has-validation form-control-last-child" id="contact-phone" type="text" name="phone" data-constraints="@PhoneNumber"><span class="form-validation"></span>
+                        </div>
+                      </div> -->
+                      <div class="col-12 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp" style="visibility: visible; animation-name: fadeSlideInUp;">
+                          <label class="form-label-outside" for="contact-message">Your Message</label>
+                          <textarea class="form-input form-control-has-validation form-control-last-child" id="contact-message" name="yourmessage" data-constraints="@Required"></textarea><span class="form-validation"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group group-middle">
+                      <div class="wow-outer">
+                        <input type="submit" id="form-submit" class="contact-form-btn btn btn-primary" value="Send" required />
+                      </div>
+                      <p>or use</p>
+                      <div class="wow-outer"><a class="button button-primary-outline button-icon button-icon-left button-winona wow slideInLeft" href="#" style="visibility: visible; animation-name: slideInLeft;"><div class="content-original"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</div><div class="content-dubbed"><span class="icon text-primary mdi mdi-facebook-messenger"></span>Messenger</div></a></div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </section>
+       <!-- Page Footer--><a class="banner" href="" target="_blank"><img src="" alt="" height="0"/></a>
+       <footer class="section footer-minimal bg-primary-darken">
+        <div class="container"> 
+          <div class="footer-minimal-inner"><a class="brand" href="/main"><img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"/></a>
+            <!-- Rights-->
+           
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. LASHKSON </p>
+          </div>
+     
+        </div>
+      </footer>
+
+      
+    </div>
+    <div class="preloader"> 
+
+      <div class="preloader-logo">
+        <img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"
+       
+      </div>
+      <!-- <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        
+        </div>
+      </div> -->
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+
+ 
+      <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" target="_blank" class="ui-to-top fa fa-whatsapp active"></a>
+  </body>
+  </html>
