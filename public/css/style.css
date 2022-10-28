@@ -7945,7 +7945,7 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-primary-darken {
-	background-color: #28334f;
+	background-color: #bf2a16;
 }
 
 .bg-primary-darker {
@@ -8634,6 +8634,7 @@ html:not(.lt-ie10) .not-animated {
 */
 /** @section ToTop */
 .ui-to-top {
+	border-radius: 50%;
 	position: fixed;
 	right: 15px;
 	bottom: 15px;
@@ -8643,7 +8644,8 @@ html:not(.lt-ie10) .not-animated {
 	font-size: 20px;
 	line-height: 56px;
 	color: #ffffff;
-	background: #516ca9;
+	
+	background: #1e7c02;
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
