@@ -13,6 +13,19 @@ module.exports = {
       }
     );
   },
+  deleteBanner: (req, callback) => {
+    pool.query(
+      `delete from banner where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+
     HomeBanner: (callback) => {
         pool.query(
           `Select * from banner`,

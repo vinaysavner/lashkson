@@ -9,6 +9,7 @@ const { Section2 } = require("../model/services")
 const { recent_projects } = require("../model/services")
 const {deleteRecentProjects} = require("../model/services")
 
+
 module.exports = {
 
   Dashboard: (req,res,next) =>{ 
@@ -42,6 +43,9 @@ module.exports = {
             // console.log(err);
             return;
           }
+       
+          
+        
       
       res.render("pages/backend/home", { title: "Express", homebanner: homebanner, mission:mission,deleteRecentProjects:deleteRecentProjects, Section2: Section2 ,data:results,});
     });
@@ -49,6 +53,7 @@ module.exports = {
   });
   });
   });
+ 
 
     
   
