@@ -8,6 +8,7 @@ const {Mission} = require("../model/services")
 const { Section2 } = require("../model/services")
 const { recent_projects } = require("../model/services")
 const {deleteRecentProjects} = require("../model/services")
+const {deleteBanner} = require("../model/services")
 
 
 module.exports = {
@@ -44,6 +45,7 @@ module.exports = {
             return;
           }
        
+       
           
         
       
@@ -52,7 +54,8 @@ module.exports = {
   });
   });
   });
-  });
+});
+
  
 
     
@@ -146,6 +149,7 @@ module.exports = {
       });
       
     },
+
    //section 2
    
 //projects

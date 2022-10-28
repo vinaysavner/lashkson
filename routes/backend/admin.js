@@ -22,6 +22,7 @@ router.get('/about', backendController.aboutUs);//call for main index page
 router.post('/about', backendController.getAboutus);//call for signup post 
 router.post("/updateSection2",backendController.updateSection2)
 router.post("/updateMission",backendController.updateMission)
+
 router.get("/recent_project/delete/:id",backendController.deleteRecentProjects)
 
 module.exports = router;
