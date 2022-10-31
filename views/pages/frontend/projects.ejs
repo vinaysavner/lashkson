@@ -11,6 +11,9 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Stylesheets-->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/plugins/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="/plugins/fonts.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">>
@@ -22,9 +25,7 @@
 
 <body>
   <div class="page">
-    <!-- Page Header--><a class="banner banner-top"
-      href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="" alt=""
-        height="0" /></a>
+    <!-- Page Header-->
     <header class="section page-header">
       <!-- RD Navbar-->
       <div class="rd-navbar-wrap">
@@ -54,131 +55,83 @@
     <!-- Nathan’s Projects-->
     <section class="section section-lg bg-gray-100 text-center">
       <div class="container">
-        <h3>Our Projects</h3>
-        <div class="isotope offset-top-2" data-isotope-layout="masonry">
+        <h3  style="font-family: 'Kanit', sans-serif;">Lashkson's Projects</h3>
+        <p  style="font-family: 'Kanit', sans-serif;"> Lashkson Construction planning is a fundamental and challenging activity in the management and execution of construction projects. It involves the choice of technology, the definition of work tasks, the estimation of the required resources and durations for individual tasks, and the identification of any interactions among the different work tasks. A good construction plan is the basis for developing the budget and the schedule for work. Developing the construction plan is a critical task in the management of construction, even if the plan is not written or otherwise formally recorded. In addition to these technical aspects of construction planning, </p>
+        <div class="isotope offset-top-2 isotope--loaded" data-isotope-layout="masonry" style="position: relative; height: 779.953px;">
           <div class="row row-30">
-
-            <% for(var i=0; i < data.length; i++ ) { %>
-            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer">
-              <!-- Thumbnail Corporate-->
-              <article class="thumbnail-corporate wow slideInDown"> <a href=""> <img
-                    class="thumbnail-corporate-image" src="/images/upload_project_images/<%= data[i].image%>" alt="" widt
-                    
-                    h="500" height="464" />
-   
-                <div class="thumbnail-corporate-caption">
-                  <p class="thumbnail-corporate-title"><%= data[i].title%></p>
-                  <!-- <p>Nathan provides companies with tools and strategies to improve operations.</p><a class="thumbnail-corporate-link" href="#"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a> -->
-                </div>
-                <div class="thumbnail-corporate-dummy"> </div>
-              </article>
+            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer" style="position: absolute; left: 0px; top: 0px;">
+                        <!-- Thumbnail Corporate-->
+                        <article class="thumbnail-corporate wow slideInDown" style="visibility: visible; animation-name: slideInDown;"><img class="thumbnail-corporate-image" src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="" width="370" height="256">
+                          <div class="thumbnail-corporate-caption">
+                            <p class="thumbnail-corporate-title"  style="font-family: 'Kanit', sans-serif;">Fabrication Plants</p>
+                            <p  style="font-family: 'Kanit', sans-serif;">Lashkson provides companies with tools and strategies to improve operations.</p><a class="thumbnail-corporate-link" href="/tanks"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a>
+                          </div>
+                          <div class="thumbnail-corporate-dummy"> </div>
+                        </article>
             </div>
-            <% } %>
+            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer" style="position: absolute; left: 399px; top: 0px;">
+                        <!-- Thumbnail Corporate-->
+                        <article class="thumbnail-corporate thumbnail-corporate-lg wow slideInDown" style="visibility: visible; animation-name: slideInDown;"><img class="thumbnail-corporate-image" src="/images/fabrication/pexels-pavel-chernonogov-2381463.jpg" alt="" width="370" height="464">
+                          <div class="thumbnail-corporate-caption">
+                            <p class="thumbnail-corporate-title"  style="font-family: 'Kanit', sans-serif;">Chennai Plants</p>
+                            <p  style="font-family: 'Kanit', sans-serif;">Consulter’s financial planning services help high net-worth individuals manage their expenses.</p><a class="thumbnail-corporate-link" href="/distilation"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a>
+                          </div>
+                          <div class="thumbnail-corporate-dummy"> </div>
+                        </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer" style="position: absolute; left: 799px; top: 0px;">
+                        <!-- Thumbnail Corporate-->
+                        <article class="thumbnail-corporate wow slideInUp" style="visibility: visible; animation-name: slideInUp;"><img class="thumbnail-corporate-image" src="/images/fabrication/pexels-mălina-sîrbu-9327054.jpg" alt="" width="370" height="256">
+                          <div class="thumbnail-corporate-caption">
+                            <p class="thumbnail-corporate-title"  style="font-family: 'Kanit', sans-serif;">TamilNadu Plants</p>
+                            <p  style="font-family: 'Kanit', sans-serif;">Tax and accounting services form the financial core of Lashkson's business management services.</p><a class="thumbnail-corporate-link" href="/evaporation_plant"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a>
+                          </div>
+                          <div class="thumbnail-corporate-dummy"> </div>
+                        </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer" style="position: absolute; left: 0px; top: 285px;">
+                        <!-- Thumbnail Corporate-->
+                        <article class="thumbnail-corporate thumbnail-corporate-lg wow slideInUp" style="visibility: visible; animation-name: slideInUp;"><img class="thumbnail-corporate-image" src="/images/fabrication/pexels-emre-can-acer-2079628.jpg" alt="" width="370" height="464">
+                          <div class="thumbnail-corporate-caption">
+                            <p class="thumbnail-corporate-title"  style="font-family: 'Kanit', sans-serif;">Erection</p>
+                            <p  style="font-family: 'Kanit', sans-serif;"> Lashkson can help you manage your Erection facilities.</p><a class="thumbnail-corporate-link" href="/evaporation_project"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a>
+                          </div>
+                          <div class="thumbnail-corporate-dummy"> </div>
+                        </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer" style="position: absolute; left: 799px; top: 285px;">
+                        <!-- Thumbnail Corporate-->
+                        <article class="thumbnail-corporate thumbnail-corporate-lg wow slideInDown" style="visibility: visible; animation-name: slideInDown;"><img class="thumbnail-corporate-image" src="/images/fabrication/pexels-ave-calvar-martinez-4705102.jpg" alt="" width="370" height="464">
+                          <div class="thumbnail-corporate-caption">
+                            <p class="thumbnail-corporate-title"  style="font-family: 'Kanit', sans-serif;">Sites</p>
+                            <p  style="font-family: 'Kanit', sans-serif;">Lashkson services provide strategic thinking to improve your effectiveness.</p><a class="thumbnail-corporate-link" href="/project_photo"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a>
+                          </div>
+                          <div class="thumbnail-corporate-dummy"> </div>
+                        </article>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 isotope-item wow-outer" style="position: absolute; left: 399px; top: 493px;">
+                        <!-- Thumbnail Corporate-->
+                        <article class="thumbnail-corporate wow slideInDown" style="visibility: visible; animation-name: slideInDown;"><img class="thumbnail-corporate-image" src="/images/fabrication/pexels-pavel-chernonogov-4025501.jpg" alt="" width="370" height="256">
+                          <div class="thumbnail-corporate-caption">
+                            <p class="thumbnail-corporate-title"  style="font-family: 'Kanit', sans-serif;">Site Projects</p>
+                            <p  style="font-family: 'Kanit', sans-serif;">Lashkson Advisory team will jointly analyze and offer objective advice to enhance your  plan.</p><a class="thumbnail-corporate-link" href="/tanks"><span class="icon mdi mdi-plus"></span><span class="icon mdi mdi-plus"></span></a>
+                          </div>
+                          <div class="thumbnail-corporate-dummy"> </div>
+                        </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section class="section section-lg bg-gray-100">
-      <div class="container">
-        <h3 class="wow-outer text-center"><span class="wow slideInUp">Safety Statement </span></h3>
-        <div class="row row-50 justify-content-center justify-content-lg-between">
-          <div class="col-md-10 col-lg-5 wow-outer">
-            <div class="owl-carousel wow slideInLeft" data-items="1" data-dots="true" data-nav="false" data-loop="true"
-              data-margin="30" data-stage-padding="0" data-mouse-drag="false">
-              <blockquote class="quote-modern">
-                <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
-                  <img src="" alt="">
-                </svg>
-                <div class="quote-modern-text">
-                  <p>“Safety is the first priority” and no compromise with
-                    safety, that is our company policy/
-                    Company safety department has developed and in-house
-                    “Safety Manual” which describes the essential safety
-                    practices to be followed by every company individual.
-                    Company has its own safety and loss prevention
-                    department, which is controlled by the Safety officer of the
-                    company. It is his direct responsibility to develop new safety
-                    standards and implementation of safety practices among
-                    the company people.
-                    Implementation of safety practices is also the responsibility
-                    of every individual working in the company. Following the
-                    good safety practices creates safe working environments.
-                    Delegated Safety Engineers will conduct “Safety refreshing
-                    seminar” on regular intervals. Hazard identification will be
-                    Prepared, reviewed and approved prior to commencing
-                    any activity. The copy will be distributed among the craft
-                    people who are involved that particular works.
-                    It is mandatory that all the employees working in the
-                    company must be attend a “Safety Awareness Course”
-                    which conducted by the company safety department.
-                    Safety inspection will be conducted for every equipment
-                    and machinery and it can be put in service only after
-                    obtaining the approval.
-                  </p>
-                  <h5 class="post-tiny-title"><a href="#">GOT 2ND PRIZE FOR AWARENESS OF INDUSTRIAL SAFETY ON
-                      NATIONAL SAFETY DAY</a></h5>
-                </div>
-
-              </blockquote>
-
-                  <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
-                    <path d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z"></path>
-                  </svg>
-                  <div class="quote-modern-text">
-                    <p>I have been working with Consulter for the past few months and they have accomplished an extraordinary effort in executing our Campaign and have delivered their skills and abilities to meet our promised targets. They have shown their excellence in providing top-notch support.</p>
-                  </div>
-                  <div class="quote-modern-meta">
-                    <div class="quote-modern-avatar"><img src="images/testimonials-person-1-96x96.jpg" alt="" width="96" height="96"/>
-                    </div>
-                    <div class="quote-modern-info">
-                      <cite class="quote-modern-cite">Kelly McMillan</cite>
-                      <p class="quote-modern-caption">Private Entrepreneur</p>
-                    </div>
-                  </div>
-                </blockquote>
-                <blockquote class="quote-modern">
-                  <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
-                    <path d="M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5                L7.539,10.206z"></path>
-                  </svg>
-                  <div class="quote-modern-text">
-                    <p>I just wanted to thank your customer service representative who contacted me twice regarding my order status. He left me a second message today with detailed information. I never had this superb customer service from any other companies before.</p>
-                  </div>
-                  <div class="quote-modern-meta">
-                    <div class="quote-modern-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96"/>
-                    </div>
-                    <div class="quote-modern-info">
-                      <cite class="quote-modern-cite">Harold Barnett</cite>
-                      <p class="quote-modern-caption">Regional Manager</p>
-                    </div>
-                  </div>
-                </blockquote> -->
-            <!-- </div>
-          </div>
-          <div class="col-md-10 col-lg-6 wow-outer">
-            <div class="thumbnail-video-1 bg-gray-700 wow slideInLeft">
-              <div class="embed-responsive embed-responsive-16by9">
-                <img src="/images/safety.png" alt="">
-              </div>
-              <div class="thumbnail-video__overlay video-overlay" style="background-image: url(/images/safety.png)"> -->
-                <!-- <div class="button-video"></div> -->
-                <!-- <h5>Lawrence Alvarado</h5> -->
-              <!-- </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>  -->
-    <!-- Map & contacts-->
   
-    <!-- Page Footer--><a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html"
-      target="_blank"><img src="" alt="" height="0" /></a>
+    <!-- Page Footer-->
     <footer class="section footer-minimal bg-primary-darken">
       <div class="container">
         <div class="footer-minimal-inner"><a class="brand" href="/"><img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22"/></a>
           <!-- Rights-->
          
-          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. LASHKSON </p>
+          <p class="rights"  style="font-family: 'Kanit', sans-serif; text-align: justify;" ><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. LASHKSON </p>
         </div>
       </div>
     </footer>

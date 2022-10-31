@@ -1,134 +1,359 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-  <head>
-    <title>Evaporation project</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
-    <link rel="stylesheet" type="text/css"  href="/plugins/bootstrap.css">
-    <link rel="stylesheet" type="text/css"  href="/plugins/fonts.css">
-    <link rel="stylesheet"  type="text/css"  href="/css/style.css">>
-    <!--[if lt IE 10]>
-    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="page">
-      <!-- Page Header--><a class="banner banner-top" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="" alt="" height="0"/></a>
-      <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-minimal" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!-- RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!-- RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="images/logo-default-398x45.png" alt="" width="199" height="22"/></a>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
-                    <!-- RD Navbar Nav-->
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="our-founder.html">Our Founder</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- RD Navbar Search-->
-                  <div class="rd-navbar-search" id="rd-navbar-search-1">
-                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-2" data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>
-                    <form class="rd-search" action="#" data-search-live="rd-search-results-live-1" method="GET">
-                      <div class="form-wrap">
-                        <label class="form-label" for="rd-navbar-search-form-input-1">Search...</label>
-                        <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input-1" type="text" name="s" autocomplete="off">
-                        <div class="rd-search-results-live" id="rd-search-results-live-1"></div>
-                      </div>
-                      <button class="rd-search-form-submit fa-search" type="submit"></button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <!-- Breadcrumbs -->
-    
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>rhino</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Signika&family=Kanit:ital@1&display=swap');
+        </style>
+      
+      <link rel="stylesheet" href="/project/css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="/project/css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="/project/css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="/project/css/jquery.mCustomScrollbar.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+      <style>
+        p,h1,h2,h3,h4,h5,h6{
+          text-align: justify; font-family: 'Kanit', sans-serif;
+        }
 
-   
-      <section class="section section-lg bg-gray-100">
-        <div class="container">
-          <h3 class="wow-outer text-center"><span class="wow slideInUp">Evaporation Project</span></h3>
-          <div class="row row-50 justify-content-center justify-content-lg-between">
-            <div class="col-md-10 col-lg-5 wow-outer">
-              <div class="owl-carousel wow slideInLeft" data-items="1" data-dots="true" data-nav="false" data-loop="true" data-margin="30" data-stage-padding="0" data-mouse-drag="false">
-                <blockquote class="quote-modern">
-                  <svg class="quote-modern-mark" x="0px" y="0px" width="35px" height="25px" viewbox="0 0 35 25">
-                   <img src="" alt="">
-                  </svg>
-                  <div class="quote-modern-text">
-                    <p>EVAPORATION PROJECT
-                        </p>
-                      
+        .nav {
+  	background-color: tomato;
+  	left: 0;
+  	position: fixed;
+  	right: 0;
+  	top: 0;
+  	transition: all 0.3s ease-in-out;
+}
+
+.nav .container {
+  	align-items: center;
+  	display: flex;
+  	justify-content: space-between;
+  	padding: 20px 0;
+  	transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  	align-items: center;
+  	display: flex;
+  	justify-content: center;
+  	list-style-type: none;
+}
+
+.nav a {
+  	color: #FFFFFF;
+  	padding: 7px 15px;
+  	text-decoration: none;
+  	transition: all 0.3s ease-in-out;
+}
+
+.nav.active {
+  	background-color: #FFFFFF;
+  	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active a {
+  	color: #000000;
+}
+
+.nav.active .container {
+  padding: 10px 0;
+}
+
+.nav a.current,
+.nav a:hover {
+  color: rgb(13, 13, 78);
+  font-weight: bold;
+}
+
+
+        
+      </style>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+    <div class="loader_bg">
+      <div class="loader"><img src="/images/LASHKSON LOGO PNG (1).png" alt="#"/></div>
+   </div>
+   <!-- end loader -->
+   <!-- header -->
+   <header class="full_bg">
+      <!-- header inner -->
+      <div class="header">
+         <div class="header_top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-3">
+                     <ul class="contat_infoma">
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> Call : 7089999935</li>
+                     </ul>
                   </div>
-                
-                </blockquote>
-              
-              </div>
+                  <div class="col-md-6">
+                     <ul class="social_icon_top text_align_center  ">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-3">
+                     <ul class="contat_infoma text_align_right">
+                        <li><a href="Javascript:void(0)"> <i class="fa fa-phone" aria-hidden="true"></i> lashkson@gmail.com</a></li>
+                     </ul>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-10 col-lg-6 wow-outer">
-              <div class="thumbnail-video-1 bg-gray-700 wow slideInLeft">
-                <div class="embed-responsive embed-responsive-16by9">
-                <img src="/images/evaporation project.png" alt="">
-                </div>
-                <div class="thumbnail-video__overlay video-overlay" style="background-image: url('/images/evaporation project.png')">
-                  <!-- <div class="button-video"></div> -->
-                  <!-- <h5>Lawrence Alvarado</h5> -->
-                </div>
-              </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="header_bottom">
+                     <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                           <div class="full">
+                              <div class="center-desk">
+                                 <div class="logo">
+                                    <a href="/tanks"><img style="float: left;"
+                                      src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22" /></a></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                           <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="navbarsExample04">
+                                 <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="/">Home</a>
+                                    </li>
+                                   
+                                    <li class="nav-item active">
+                                       <a class="nav-link" href="/projects">project</a>
+                                    </li>
+        
+                                 </ul>
+                              </div>
+                            
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- Map & contacts-->
-   
-      <!-- Page Footer--><a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="" alt="" height="0"/></a>
-      <footer class="section footer-minimal bg-primary-darken">
-        <div class="container"> 
-          <div class="footer-minimal-inner"><a class="brand" href="index.html"><img src="images/logo-light-398x45.png" alt="" width="199" height="22"/></a>
-            <!-- Rights-->
-            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
-          </div>
-        </div>
-      </footer>
-    </div>
-    <div class="preloader"> 
-      <div class="preloader-logo"><img src="images/logo-default-398x45.png" alt="" width="199" height="22"/>
+         </div>
       </div>
-      <div class="preloader-body">
-        <div id="loadingProgressG">
-          <div class="loadingProgressG" id="loadingProgressG_1"></div>
-        </div>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+   </header>
+    
+      <div class="projects">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage" >
+                  <span><h2 style="font-family: 'Signika', sans-serif; text-align: center;">Lashkson's Fabrication Projects</h2></span>  
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                  <div id="proj" class="carousel slide projects_ban" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="#proj" data-slide-to="0" class="active"></li>
+                        <li data-target="#proj" data-slide-to="1"></li>
+                        <li data-target="#proj" data-slide-to="2"></li>
+                     </ol>
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <div class="container-fluid">
+                              <div class="carousel-caption relative3">
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container-fluid">
+                              <div class="carousel-caption relative3">
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <div class="container-fluid">
+                              <div class="carousel-caption relative3">
+                                 <div class="row">
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="project">
+                                          <div class="project_img">
+                                             <figure><img src="/images/fabrication/pexels-tima-miroshnichenko-5846150.jpg" alt="#"/></figure>
+                                          </div>
+                                          <div id="pro_ho" class="project_text">
+                                             <h3>Reader will be<br> distracted by the readable</h3>
+                                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised</p>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#proj" role="button" data-slide="prev">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#proj" role="button" data-slide="next">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
+  
+
     </div>
+  
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
-    <!-- Javascript-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="/project/js/jquery.min.js"></script>
+      <script src="/project/js/bootstrap.bundle.min.js"></script>
+      <script src="/project/js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="/project/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="/project/js/custom.js"></script>
+      <script>
+        const nav = document.querySelector('.nav')
+window.addEventListener('scroll', fixNav)
 
-    <a href="//web.whatsapp.com/send?phone=9977776189&text&app_absent=0"> id ="ui-to-top" class="ui-to-top fa fa-whatsapp active"></a>
-  </body>
+function fixNav() {
+    if(window.scrollY > nav.offsetHeight + 150) {
+        nav.classList.add('active')
+    } else {
+        nav.classList.remove('active')
+    }
+}
+      </script>
+   </body>
 </html>

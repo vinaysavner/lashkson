@@ -101,10 +101,6 @@ console.log(req);
 });
 app.use(express.static(__dirname + "/views/public"));
 
-
-
-
-
 app.use("/", homeRouter)
 app.use("/", projectRouter)
 app.use("/", project_pagesRouter)

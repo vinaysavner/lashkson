@@ -46,9 +46,6 @@ module.exports = {
           }
        
        
-          
-        
-      
       res.render("pages/backend/home", { title: "Express", homebanner: homebanner, mission:mission,deleteRecentProjects:deleteRecentProjects, Section2: Section2 ,data:results,});
     });
   });
