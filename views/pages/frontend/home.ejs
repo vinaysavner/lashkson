@@ -33,11 +33,10 @@
     }
     .text-primary {
     color: #ffffff!important;
- 
 }
 /* Slider */
 .carousel-item {
-  height: 90vh;
+  height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -83,85 +82,125 @@
                       </li>
                     </ul>
                   </div>
-               
+                  <button class="rd-navbar-search-toggle"
+                    data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>
                 </div>
               </div>
-         
+              <!-- RD Navbar Search-->
+              <!-- <div class="rd-navbar-search" id="rd-navbar-search-1">
+                <form class="rd-search" action="#" data-search-live="rd-search-results-live-1" method="GET">
+                  <div class="form-wrap">
+                    <label class="form-label" for="rd-navbar-search-form-input-1">Search...</label>
+                    <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input-1" type="text"
+                      name="s" autocomplete="off">
+                    <div class="rd-search-results-live" id="rd-search-results-live-1"></div>
+                  </div>
+                  <button class="rd-search-form-submit fa-search" type="submit"></button>
+                </form>
+              </div> -->
               <%- include('../../nav_partials/nav') %>
             </div>
           </div>
         </nav>
       </div>
     </header>
+    <!-- style="background: #f12711;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      "> -->
+<!-- Slider -->
 
-<section class="slider-section">
-	<div id="carousel" class="carousel slide" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#carousel" data-slide-to="0" class="active"></li>
-			<li data-target="#carousel" data-slide-to="1"></li>
-			<li data-target="#carousel" data-slide-to="2"></li>
-		</ol> <!-- End of Indicators -->
 
-		<!-- Carousel Content -->
- 
-		<div class="carousel-inner" role="listbox">
-      <% for(var i=0; i < banner.length; i++ ) { %>
-			<div class="carousel-item  <% if(i==0){ %>active<% } %>"style="background-image: url('/images/upload_banner_images/<%= banner[i].image%>');">
-				<div class="carousel-caption d-none d-md-block">
-          <div class="container">
 
-            <div class="row">
-              <div class="col-md-6 col-lg-5">
-                <div class="section-halfscreen-content">
-                  <div class="wow-outer heading-3">
-                    <h4 class="wow fadeInUp" data-wow-delay=".2s"  style="font-family: 'Kanit', sans-serif; color: #fff; text-shadow: 1px 2px black; "><span
-                        class="font-weight-bold">Our company </span><br><span
-                        class="font-weight-bold sumbol text-primary"  style="font-family: 'Kanit', sans-serif; "> provides a variety of
-                        consulting and planning services</span><span
-                        class="font-weight-light"  style="font-family: 'Kanit', sans-serif; text-shadow: 1px 2px black; ">that help small and medium busineses worldwide.</span></h4>
+
+
+
+
+
+
+
+
+
+
+
+      
+    <div>
+      <section class="section section-halfscreen bg-image" style="background: #EB3349;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       ">
+        <div class="section-halfscreen-inner">
+          <!-- <% for(var i=0; i < banner.length; i++ ) { %> -->
+            <div class="section-halfscreen-image wow fadeIn" >
+              <div id="carousel" class="carousel slide" data-ride="carousel"  style="height: 100%;">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel" data-slide-to="1"></li>
+                  <li data-target="#carousel" data-slide-to="2"></li>
+                </ol> <!-- End of Indicators -->
+            
+                <!-- Carousel Content -->
+             
+                <div class="carousel-inner" style="height: 100%;" role="listbox">
+                  <% for(var i=0; i < banner.length; i++ ) { %>
+                  <div class="carousel-item  <% if(i==0){ %>active<% } %>"
+                 " style="background-image: url('/images/upload_banner_images/<%= banner[i].image%>');">
+                  </div> 
+                  <% } %>
+                  
+                  <!-- End of Carousel Item -->
+            
+                  <!-- <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Bridge Picture</h3>
+                      <p>Awesome description for bridge.</p>
+                    </div>
+                  </div> 
+            
+                  <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Flowers & Grass</h3>
+                      <p>Beauty of Flowers & Grass.</p>
+                    </div>
+                  </div>  -->
+                </div> <!-- End of Carousel Content -->
+            
+                <!-- Previous & Next -->
+                <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+              </div> <!-- End of Carousel -->
+            </div>
+            <!-- <% } %> -->
+            
+              <div class="container">
+
+                <div class="row">
+                  <div class="col-md-6 col-lg-5">
+                    <div class="section-halfscreen-content">
+                      <div class="wow-outer heading-3">
+                        <h4 class="wow fadeInUp" data-wow-delay=".2s"  style="font-family: 'Kanit', sans-serif; color: #fff;"><span
+                            class="font-weight-bold">Our company </span><br><span
+                            class="font-weight-bold sumbol text-primary"  style="font-family: 'Kanit', sans-serif; "> provides a variety of
+                            consulting and planning services</span><span
+                            class="font-weight-light"  style="font-family: 'Kanit', sans-serif;">that help small and medium busineses worldwide.</span></h4>
+                      </div>
+                      <div class="wow-outer p">
+                        <p class="custom-article wow fadeInDown" data-wow-delay=".2s"  style="color: #fff; font-family: 'Bree Serif', serif;  text-align: justify;font-size: x-large; ">  Lashkson Deal in painting, chemical coating, industrial floor epoxy flooring, all kind of waterproofing & general civil services as per the customer’s requirement. Our Customers belongs from manufacture industries, chemical industries, cement industries, oil & gas fields, hotels, hospitals, constructions companies.</p>
+                      </div><a class="button button-primary button-winona wow fadeIn" href="/about">Read More</a>
+                    </div>
                   </div>
-                  <div class="wow-outer p">
-                    <p class="custom-article wow fadeInDown" data-wow-delay=".2s"  style="color: #fff; font-family: 'Bree Serif', serif;  text-align: justify;font-size: x-large; text-shadow: 1px 1px black; ">  Lashkson Deal in painting, chemical coating, industrial floor epoxy flooring, all kind of waterproofing & general civil services as per the customer’s requirement. Our Customers belongs from manufacture industries, chemical industries, cement industries, oil & gas fields, hotels, hospitals, constructions companies.</p>
-                  </div><a class="button button-primary button-winona wow fadeIn" href="/about">Read More</a>
                 </div>
               </div>
-            </div>
-          </div>
-				</div>
-			</div> 
-      <% } %>
-      
-      <!-- End of Carousel Item -->
-
-			<!-- <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');">
-				<div class="carousel-caption d-none d-md-block">
-					<h3>Bridge Picture</h3>
-					<p>Awesome description for bridge.</p>
-				</div>
-			</div> 
-
-			<div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg');">
-				<div class="carousel-caption d-none d-md-block">
-					<h3>Flowers & Grass</h3>
-					<p>Beauty of Flowers & Grass.</p>
-				</div>
-			</div>  -->
-		</div> <!-- End of Carousel Content -->
-
-		<!-- Previous & Next -->
-		<a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only"></span>
-		</a>
-		<a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only"></span>
-		</a>
-	</div> <!-- End of Carousel -->
-</section> <!-- End of Slider -->
-
-
+        </div>
+      </section>
+    </div>
 
     <div class="tabs-horizontal"></div>
 

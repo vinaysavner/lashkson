@@ -872,6 +872,7 @@ a[href*='tel'], a[href*='mailto'] {
 
 @media (min-width: 1200px) {
 	.box-creative-icon {
+	
 		width: 2.4em;
 		height: 2.4em;
 		font-size: 40px;
