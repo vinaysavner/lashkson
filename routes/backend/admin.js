@@ -23,6 +23,7 @@ router.post('/about', backendController.getAboutus);//call for signup post
 router.post("/updateSection2",backendController.updateSection2)
 router.post("/updateMission",backendController.updateMission)
 router.get("/delete/:id",backendController.deleteBanner)
+router.get("/projects/delete/:id",backendController.deleteRecentProjects)
 
 router.get("/recent_project/delete/:id",backendController.deleteRecentProjects)
 

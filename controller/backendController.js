@@ -39,20 +39,14 @@ module.exports = {
   
           return;
         }
-        deleteRecentProjects(req, (err, deleteRecentProjects) => {
-          // console.log(results);
-          if (err) {
-            // console.log(err);
-            return;
-          }
+     
        
-       
-      res.render("pages/backend/home", { title: "Express", homebanner: homebanner, mission:mission,deleteRecentProjects:deleteRecentProjects, Section2: Section2 ,data:results,});
+      res.render("pages/backend/home", { title: "Express", homebanner: homebanner, mission:mission, Section2: Section2 ,data:results,});
     });
   });
   });
   });
-});
+
 
  
 
@@ -99,7 +93,8 @@ module.exports = {
           // console.log(err);
           return;
         }
-        res.render("pages/backend/home", { title: "Express", data: results});
+        res.redirect('/admin/dashboard/')
+        next();
       
       });
     },

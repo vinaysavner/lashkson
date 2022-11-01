@@ -4,7 +4,7 @@ module.exports = {
          res.render("pages/projects/distilation", { title: "Express" });
      },
      tanks:(req,res,next)=>{
-        res.render("pages/projects/tanks", { title: "Express" });
+        res.render("pages/projects/tanks", { title: "Express",active_nav: "home" });
     },
     molasses_tank:(req,res,next)=>{
         res.render("pages/projects/molasses_tank", { title: "Express" });
