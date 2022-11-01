@@ -1920,26 +1920,26 @@ hr {
 
 .button-default:hover, .button-default:active {
 	color: #fff;
-	background-color: #354879;
-	border-color: #354879;
+	background-color: rgb(12 27 95);
+	border-color: rgb(12 27 95);
 }
 
 .button.button-primary, .button.button-primary:focus {
 	color: #fff;
-	background-color: #354879;
-	border-color: #354879;
+	background-color: rgb(12 27 95);
+	border-color: rgb(12 27 95);
 }
 
 .button.button-primary:hover, .button.button-primary:active {
 	color: #fff;
-	background-color: #28334f;
-	border-color: #28334f;
+	background-color:rgb(12 27 95);
+	border-color:rgb(12 27 95);
 }
 
 html .button.button-primary-lighten, html .button.button-primary-lighten:focus {
 	color: #fff;
-	background-color: #354879;
-	border-color: #354879;
+	background-color: rgb(12 27 95);
+	border-color: rgb(12 27 95);
 }
 
 html .button.button-primary-lighten:hover, html .button.button-primary-lighten:active {
@@ -7945,7 +7945,8 @@ html [class*='section-'].section-bottom-0 {
 }
 
 .bg-primary-darken {
-	background-color: tomato
+	background-color: rgb(225, 77, 42);
+
 }
 
 .bg-primary-darker {
@@ -8764,6 +8765,7 @@ html.tablet .ui-to-top {
 	line-height: 40px;
 	cursor: pointer;
 	color: black;
+
 	background-color: transparent;
 	border: none;
 	display: none;
@@ -8913,7 +8915,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-search .rd-search-form-submit:hover {
-	color: #354879;
+	color: #fd0000;
 }
 
 .rd-navbar-search .rd-search-results-live {
@@ -9012,21 +9014,21 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-item.focus .rd-nav-link, .rd-navbar-static .rd-nav-item.opened .rd-nav-link {
-	color: #4c68ae;
+	color: #fc0000;
 	background: transparent;
 }
 
 .rd-navbar-static .rd-nav-item.focus > .rd-navbar-submenu-toggle, .rd-navbar-static .rd-nav-item.opened > .rd-navbar-submenu-toggle {
-	color: #4c68ae;
+	color: #fc0000;
 }
 
 .rd-navbar-static .rd-nav-item.active .rd-nav-link {
-	color: #4c68ae;
+	color: #fc0000;
 	background: transparent;
 }
 
 .rd-navbar-static .rd-nav-item.active > .rd-navbar-submenu-toggle {
-	color: #4c68ae;
+	color: #fc0000;
 }
 
 .rd-navbar-static .rd-nav-item.focus > .rd-navbar-submenu-toggle::before,
@@ -9050,7 +9052,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-item > .rd-navbar-submenu-toggle:hover {
-	color: #4c68ae;
+	color: #fc0000;
 }
 
 .rd-navbar-static .rd-nav-item > .rd-navbar-submenu {
@@ -9064,12 +9066,14 @@ html.tablet .ui-to-top {
 .rd-navbar-static .rd-nav-link {
 	position: relative;
 	display: inline-block;
-	color: #28334f;
+	font-style: bold;
+	color: #000000;
+	font-weight: bold;
 	transition: .25s;
 }
 
 .rd-navbar-static .rd-nav-link:hover {
-	color: #4c68ae;
+	color: #ff0000;
 }
 
 .rd-navbar-static .rd-menu {
@@ -9096,7 +9100,7 @@ html.tablet .ui-to-top {
 	position: absolute;
 	left: 0;
 	width: 290px;
-	background: #28334f;
+	background: #ff0000;
 	z-index: 5;
 }
 
@@ -9480,7 +9484,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap::-webkit-scrollbar-track {
-	background: #354879;
+	background: #ff0000;
 	border: none;
 	border-radius: 0;
 }
@@ -9800,7 +9804,8 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-nav-item:hover .rd-nav-link, .rd-navbar-fixed .rd-nav-item.focus .rd-nav-link, .rd-navbar-fixed .rd-nav-item.active .rd-nav-link, .rd-navbar-fixed .rd-nav-item.opened .rd-nav-link {
-	color: #fff;
+	color: #ff0000;
+
 	background: #354879;
 }
 
@@ -10463,7 +10468,7 @@ html.rd-navbar-fixed-linked .page {
 .rd-navbar-thin.rd-navbar-static .rd-nav-link:hover,
 .rd-navbar-thin.rd-navbar-static .rd-nav-link:hover ~ .rd-navbar-submenu-toggle,
 .rd-navbar-thin.rd-navbar-static .rd-navbar-search-toggle:hover {
-	color: #5c76b8;
+	color: #ff0000;
 }
 
 .rd-navbar-thin.rd-navbar-static .rd-menu {
@@ -10502,7 +10507,7 @@ html.rd-navbar-fixed-linked .page {
 	transform: translateX(-50%);
 	width: 120vw;
 	height: 100%;
-	background-color: #f5f6fa;
+	background-color: #faf5f5;
 }
 
 .rd-navbar-thin.rd-navbar-static .rd-search .form-wrap {
@@ -10771,7 +10776,7 @@ html.rd-navbar-fixed-linked .page {
 .bg-primary .rd-navbar-minimal .rd-navbar-search-toggle,
 .bg-primary-darken .rd-navbar-minimal .rd-navbar-search-toggle,
 .bg-primary-darker .rd-navbar-minimal .rd-navbar-search-toggle {
-	color: #fff;
+	color: rgb(255, 0, 0);
 }
 
 .context-dark .rd-navbar-minimal.rd-navbar-static, .bg-gray-700 .rd-navbar-minimal.rd-navbar-static, .bg-gray-800 .rd-navbar-minimal.rd-navbar-static, .bg-primary .rd-navbar-minimal.rd-navbar-static, .bg-primary-darken .rd-navbar-minimal.rd-navbar-static, .bg-primary-darker .rd-navbar-minimal.rd-navbar-static {

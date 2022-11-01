@@ -29,6 +29,7 @@ module.exports = {
     HomeBanner: (callback) => {
         pool.query(
           `Select * from banner`,
+        
     
           (error, results, fields) => {
             console.log("image",results);

@@ -11,7 +11,8 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Bree+Serif&family=Righteous&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
   <!-- Stylesheets-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -30,6 +31,17 @@
       align-items: center;
       justify-content: center;
     }
+    .text-primary {
+    color: #ffffff!important;
+ 
+}
+/* Slider */
+.carousel-item {
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
   </style>
   <!--[if lt IE 10]>
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -71,57 +83,85 @@
                       </li>
                     </ul>
                   </div>
-                  <button class="rd-navbar-search-toggle"
-                    data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>
+               
                 </div>
               </div>
-              <!-- RD Navbar Search-->
-              <div class="rd-navbar-search" id="rd-navbar-search-1">
-                <form class="rd-search" action="#" data-search-live="rd-search-results-live-1" method="GET">
-                  <div class="form-wrap">
-                    <label class="form-label" for="rd-navbar-search-form-input-1">Search...</label>
-                    <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input-1" type="text"
-                      name="s" autocomplete="off">
-                    <div class="rd-search-results-live" id="rd-search-results-live-1"></div>
-                  </div>
-                  <button class="rd-search-form-submit fa-search" type="submit"></button>
-                </form>
-              </div>
+         
               <%- include('../../nav_partials/nav') %>
             </div>
           </div>
         </nav>
       </div>
     </header>
-    <div id="slider">
-      <section class="section section-halfscreen bg-image" style="background-color: tomato;">
-        <div class="section-halfscreen-inner">
-          <% for(var i=0; i < banner.length; i++ ) { %>
-            <div class="section-halfscreen-image wow fadeIn"
-              style="background-image: url('/images/upload_banner_images/<%= banner[i].image%>');"></div>
-            <% } %>
-              <div class="container">
 
-                <div class="row">
-                  <div class="col-md-6 col-lg-5">
-                    <div class="section-halfscreen-content">
-                      <div class="wow-outer heading-3">
-                        <h2 class="wow fadeInUp" data-wow-delay=".2s"  style="font-family: 'Kanit', sans-serif;"><span
-                            class="font-weight-bold">Lashkson</span><br><span
-                            class="font-weight-bold sumbol text-primary"  style="font-family: 'Kanit', sans-serif;">Your toolkit </span><span
-                            class="font-weight-light"  style="font-family: 'Kanit', sans-serif;">for business ingenuity.</span></h2>
-                      </div>
-                      <div class="wow-outer p">
-                        <p class="custom-article wow fadeInDown" data-wow-delay=".2s"  style="font-family: 'Kanit', sans-serif;">Our company provides a variety of
-                          consulting and planning services that help small and medium busineses worldwide.</p>
-                      </div><a class="button button-primary button-winona wow fadeIn" href="/about">Read More</a>
-                    </div>
+<section class="slider-section">
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel" data-slide-to="1"></li>
+			<li data-target="#carousel" data-slide-to="2"></li>
+		</ol> <!-- End of Indicators -->
+
+		<!-- Carousel Content -->
+ 
+		<div class="carousel-inner" role="listbox">
+      <% for(var i=0; i < banner.length; i++ ) { %>
+			<div class="carousel-item  <% if(i==0){ %>active<% } %>"style="background-image: url('/images/upload_banner_images/<%= banner[i].image%>');">
+				<div class="carousel-caption d-none d-md-block">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-md-6 col-lg-5">
+                <div class="section-halfscreen-content">
+                  <div class="wow-outer heading-3">
+                    <h4 class="wow fadeInUp" data-wow-delay=".2s"  style="font-family: 'Kanit', sans-serif; color: #fff; text-shadow: 1px 2px black; "><span
+                        class="font-weight-bold">Our company </span><br><span
+                        class="font-weight-bold sumbol text-primary"  style="font-family: 'Kanit', sans-serif; "> provides a variety of
+                        consulting and planning services</span><span
+                        class="font-weight-light"  style="font-family: 'Kanit', sans-serif; text-shadow: 1px 2px black; ">that help small and medium busineses worldwide.</span></h4>
                   </div>
+                  <div class="wow-outer p">
+                    <p class="custom-article wow fadeInDown" data-wow-delay=".2s"  style="color: #fff; font-family: 'Bree Serif', serif;  text-align: justify;font-size: x-large; text-shadow: 1px 1px black; ">  Lashkson Deal in painting, chemical coating, industrial floor epoxy flooring, all kind of waterproofing & general civil services as per the customer’s requirement. Our Customers belongs from manufacture industries, chemical industries, cement industries, oil & gas fields, hotels, hospitals, constructions companies.</p>
+                  </div><a class="button button-primary button-winona wow fadeIn" href="/about">Read More</a>
                 </div>
               </div>
-        </div>
-      </section>
-    </div>
+            </div>
+          </div>
+				</div>
+			</div> 
+      <% } %>
+      
+      <!-- End of Carousel Item -->
+
+			<!-- <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>Bridge Picture</h3>
+					<p>Awesome description for bridge.</p>
+				</div>
+			</div> 
+
+			<div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg');">
+				<div class="carousel-caption d-none d-md-block">
+					<h3>Flowers & Grass</h3>
+					<p>Beauty of Flowers & Grass.</p>
+				</div>
+			</div>  -->
+		</div> <!-- End of Carousel Content -->
+
+		<!-- Previous & Next -->
+		<a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only"></span>
+		</a>
+		<a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only"></span>
+		</a>
+	</div> <!-- End of Carousel -->
+</section> <!-- End of Slider -->
+
+
 
     <div class="tabs-horizontal"></div>
 
@@ -430,6 +470,7 @@
         </div>
       </div> -->
     </div>
+    <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0"  id="ui-to-top" class="ui-to-top fa fa-whatsapp active"></a>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <script src="js/core.min.js"></script>
@@ -437,13 +478,19 @@
 
     <!-- <a href="//web.whatsapp.com/send?phone=9977776189&text&app_absent=0" class="fa fa-whatsapp active">Send Message</a> -->
     <!--coded by Starlight-->
-    <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" target="_blank"
-      class="ui-to-top fa fa-whatsapp active"></a>
+    
+
     <!-- <a href="//web.whatsapp.com/send?phone=9977776189&text&app_absent=0" id ="ui-to-top" target="_blank" class="ui-to-top fa fa-whatsapp active"></a> -->
     <!-- <a href="//web.whatsapp.com/send?phone=9148270108&text&app_absent=0" class="ui-to-top fa fa-whatsapp active"></a> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
+      <!-- <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" id ="ui-to-top" target="_blank"
+      class="ui-to-top fa fa-whatsapp active"></a> -->
+  
+      <!-- <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" target="_blank" class="ui-to-top ">
+        <i class="fa fa-whatsapp active"></i>
+        </a> -->
 </body>
 
 </html>

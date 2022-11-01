@@ -15,12 +15,13 @@ module.exports = {
 
   Dashboard: (req,res,next) =>{ 
    HomeBanner((err,homebanner) => {
+    console.log("home", homebanner)
     if (err) {
       // console.log(err);
       return;
     }
     Mission((err,mission) => {
-      console.log(mission);
+      // console.log(mission);
       if (err) {
         // console.log(err);
         return;
@@ -31,7 +32,7 @@ module.exports = {
         return;
       }
       recent_projects((err, results) => {
-     console.log("recent_projectssssss", results)
+    //  console.log("recent_projectssssss", results)
         if (err) {
           console.log(err);
           // res.send(err.message)
@@ -131,6 +132,17 @@ module.exports = {
        } else {
           res.render('pages/backend/home');
        }
+      },
+      deleteBanner: (req, res, next) => {
+        deleteBanner(req, (err,homebanner ) => {
+          // console.log(results);
+          if (err) {
+            // console.log(err);
+            return;
+          }
+        res.redirect('/admin/dashboard/')
+        next();
+        });
       },
   Homebanner:(req,res)=>{
         console.log("resssssss=>",res);

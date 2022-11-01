@@ -50,7 +50,9 @@
                         <td>
                           <img width="100" src="/images/upload_banner_images/<%= homebanner[i].image %>" alt="Product 1" class="img">
                         </td>
-             
+                        <td>
+                          <a href="/delete/<%=homebanner[i].id%>" class="btn btn-primary btn sm">Delete</a>
+                        </td>
                       </tr>
                       <% } %>
                     
@@ -132,6 +134,15 @@
 
           </div>
         
+
+
+
+
+
+
+
+
+          <!-- rgb(179 127 22) -->
           <!-- <div class="col-md-12">
             <form class="form-horizontal" role="form" action="/createSection2" enctype="multipart/form-data" method="post">
               <div class="card card-default">
