@@ -167,15 +167,32 @@ h5,h6{
             <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
              
                 <div class="carousel-inner" role="listbox">
-                  <% for(var i=0; i < testimonial_data .length; i++ ) { %>
-                    <div class="carousel-item  <% if(i==0){ %>active<% } %>">
+              
+                    <div class="carousel-item active">
                         <div class="testimonial4_slide">
-                            <img src="/images/upload_testimonial_images/<%=testimonial_data [i].image%>" class="img-circle img-responsive" />
-                            <p style="font-family: 'Kanit', sans-serif;"><%= testimonial_data [i].feedback  %> </p>
-                            <h4 style="font-family: 'Kanit', sans-serif;"><%= testimonial_data [i].client_name  %></h4>
+
+                              <img src="/images/test/gettyimages-1060638258-170667a.jpg" class="img-circle img-responsive" />
+                            <p style="font-family: 'Kanit', sans-serif;">Lashkson is one of the best contruction. </p> 
+                           <h4 style="font-family: 'Kanit', sans-serif;">Riddhi</h4>
                         </div>
                       </div>
-                      <% } %>
+                      <div class="carousel-item ">
+                        <div class="testimonial4_slide">
+             
+                              <img src="/images/test/gettyimages-1145044799-170667a.jpg" class="img-circle img-responsive" />
+                            <p style="font-family: 'Kanit', sans-serif;"> The entire team tactfully delivered a project of exceptional quality while staying on schedule and  </p> 
+                           <h4 style="font-family: 'Kanit', sans-serif;">Rishi</h4>
+                        </div>
+                      </div>
+                      <div class="carousel-item ">
+                        <div class="testimonial4_slide">
+                     
+                              <img src="/images/test/gettyimages-1318928248-170667a.jpg" class="img-circle img-responsive" /> 
+                            <p style="font-family: 'Kanit', sans-serif;">"Thank you for guiding us through the construction process, being kind, understanding, and always re </p> 
+                           <h4 style="font-family: 'Kanit', sans-serif;">Megha</h4>
+                        </div>
+                      </div>
+                   
                 </div>
                 <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
