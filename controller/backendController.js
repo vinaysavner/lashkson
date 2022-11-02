@@ -9,7 +9,8 @@ const { Section2 } = require("../model/services")
 const { recent_projects } = require("../model/services")
 const {deleteRecentProjects} = require("../model/services")
 const {deleteBanner} = require("../model/services")
-
+const {Testimonial} = require("../model/services")
+const {deleteTestimonial} = require("../model/services")
 
 module.exports = {
 
@@ -62,10 +63,19 @@ module.exports = {
 
         return;
       }
+           
+      Testimonial((err,Testimonial) => {
+        console.log(results);
+        if (err) {
+          // console.log(err);
+          return;
+        }  
+      
       console.log("resssssss=>>>>>",results);
       // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-      res.render("pages/backend/about", { title: "Express", data: results });
+      res.render("pages/backend/about", { title: "Express", data: results, Testimonial:Testimonial });
     });
+  });
   
     },
 
@@ -154,7 +164,64 @@ module.exports = {
       
     },
 
-   //section 2
+ //testimonials
+   //banner
+
+  Testimonial:function(req, res){
+    console.log("resssssss=>",res);
+    message = '';
+   if(req.method == "POST"){
+      var post  = req.body;
+      var client_name= post.client_name;
+      var feedback= post.feedback;
+      if (!req.files)
+                return res.status(400).send('No files were uploaded.');
+        var file = req.files.uploaded_image;
+        var img_name=file.name;
+   
+         if(file.mimetype == "image/jpeg" ||file.mimetype == "image/png"||file.mimetype == "image/gif" ){
+                                
+              file.mv('public/images/upload_Testimonial_images/'+file.name, function(err) {
+                            
+                  if (err)
+                    return res.status(500).send(err);
+                        var sql = "INSERT INTO `testimonials`(image,client_name,feedback) VALUES ('" +img_name+ "','" +client_name+ "','" +feedback+ "')";
+                            var query = pool.query(sql, function(err, result) {
+                                 res.redirect('profile/'+result.insertId);
+                            });
+                       });
+          } else {
+            message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
+            res.render('pages/backend/about',{message: message});
+          }
+   } else {
+      res.render('pages/backend/about');
+   }
+  },
+  getTestimonial: function(req, res){
+    var message = '';
+    // var id = req.params.id;
+    var sql="SELECT * FROM `testimonials`"; 
+   pool.query(sql, function(err, result){
+    if(result.length <= 0)
+      message = "Profile not found!";
+      
+      res.render('pages/backend/about',{data:result, message: message});
+   });
+  },
+  deleteTestimonial: (req, res, next) => {
+    deleteTestimonial(req, (err,deleteTestimonial) => {
+      // console.log(results);
+      if (err) {
+        // console.log(err);
+        return;
+      }
+    res.redirect('/about_us/')
+    next();
+    });
+  },
+
+
    
 //projects
 
@@ -245,10 +312,8 @@ aboutUs :function(req, res){
   },
 
   //contact us
-
-
-updateSection2: function(req, res)  {
-    updateSection2(req.body, (err, results)=> {
+ updateSection2: function(req, res)  {
+   updateSection2(req.body, (err, results)=> {
   
       if (err) {
         console.log(err);
@@ -261,8 +326,8 @@ updateSection2: function(req, res)  {
       res.redirect('/admin/dashboard')
       
     });
-  }
-  ,
+  },
+
   updateMission: function(req, res)  {
     updateMission(req.body, (err, results)=> {
   

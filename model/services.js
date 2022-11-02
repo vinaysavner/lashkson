@@ -25,6 +25,18 @@ module.exports = {
       }
     );
   },
+  deleteTestimonial: (req, callback) => {
+    pool.query(
+      `delete from testimonials where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
 
     HomeBanner: (callback) => {
         pool.query(
@@ -58,11 +70,9 @@ module.exports = {
           }
         );
       },
-   
-      updateSection2: (data, callback) => {
+      updateSection2: (data,callback) => {
         // console.log("data===",data);
         pool.query(
-        
           "UPDATE section2 SET title = ?,description = ?",
           [data.title, data.description],
           (error, results, fields) => {
@@ -93,6 +103,21 @@ module.exports = {
     
           (error, results, fields) => {
             console.log("projects",results);
+       
+            if (error) {
+              return callback(error);
+            }
+            console.log("banghghnerResultdsgfgrer",results);
+            return callback(null, results);
+          }
+        );
+      },
+      Testimonial: (callback) => {
+        pool.query(
+          `Select * from testimonials`,
+    
+          (error, results, fields) => {
+            console.log("testimonials",results);
        
             if (error) {
               return callback(error);
