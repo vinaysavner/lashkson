@@ -161,17 +161,17 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <% if(Testimonial.length > 0){ %>
-                        <% for(var i=0; i < Testimonial.length; i++ ) { %>
+                        <% if(testimonial.length > 0){ %>
+                        <% for(var i=0; i < testimonial.length; i++ ) { %>
                         <tr>
                           <td><%=i+1%></td>
                           <td>
-                            <img width="100" src="/images/upload_testimonial_images/<%= Testimonial[i].image %>" alt="Product 1" class="img">
+                            <img width="100" src="/images/upload_testimonial_images/<%= testimonial[i].image %>" alt="Product 1" class="img">
                             
                           </td>
-                          <td><%= Testimonial[i].client_name %></td>
-                          <td><%= Testimonial[i].feedback %></td>
-                         <td> <a href="/testimonial/delete/<%=Testimonial[i].id%>" class="btn btn-primary btn sm">Delete</a></td>
+                          <td><%= testimonial[i].client_name %></td>
+                          <td><%= testimonial[i].feedback %></td>
+                         <td> <a href="/testimonial/delete/<%=testimonial[i].id%>" class="btn btn-primary btn sm">Delete</a></td>
                         </tr>
                         <% } %>
                         <% }else{ %>

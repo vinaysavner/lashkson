@@ -12,15 +12,16 @@ module.exports = {
               return;
             }
        
-            Testimonial( (err,Testimonial_data) => {
+            Testimonial((err,testimonial_data) => {
               console.log(results);
               if (err) {
                 // console.log(err);
                 return;
-              }  
+              } 
+            
             console.log("resssssss=>>>>>",results);
             // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-            res.render("pages/frontend/about", { title: "Express", data: results ,Testimonial : Testimonial_data ,active_nav: "about"});
+            res.render("pages/frontend/about", { title: "Express", data: results ,testimonial_data : testimonial_data ,active_nav: "about"});
           });
         });
     

@@ -64,7 +64,7 @@ module.exports = {
         return;
       }
            
-      Testimonial((err,Testimonial) => {
+      Testimonial((err,testimonial) => {
         console.log(results);
         if (err) {
           // console.log(err);
@@ -73,7 +73,7 @@ module.exports = {
       
       console.log("resssssss=>>>>>",results);
       // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-      res.render("pages/backend/about", { title: "Express", data: results, Testimonial:Testimonial });
+      res.render("pages/backend/about", { title: "Express", data: results, testimonial:testimonial });
     });
   });
   
