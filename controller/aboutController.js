@@ -20,7 +20,7 @@ module.exports = {
               }  
             console.log("resssssss=>>>>>",results);
             // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-            res.render("pages/frontend/about", { title: "Express", data: results ,Testimonials:Testimonials,active_nav: "about"});
+            res.render("pages/frontend/about", { title: "Express", data: results ,Testimonials : Testimonials ,active_nav: "about"});
           });
         });
     
