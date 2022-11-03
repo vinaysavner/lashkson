@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get("/admin",authController.main)//admin
 router.post("/admin",authController.login);
-router.get('/logout',authController.logout)
+
 router.post('/register',authController.createUser)
 router.get("/admin/dashboard",backendController.Dashboard)
 router.get("/about_us",backendController.About_us)

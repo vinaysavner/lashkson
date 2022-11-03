@@ -5,10 +5,4 @@ var router = express.Router();
 
 router.get("/about",aboutController.About)
 
-
-
-
-
-
-
 module.exports = router;
