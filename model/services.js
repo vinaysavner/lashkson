@@ -25,6 +25,18 @@ module.exports = {
       }
     );
   },
+  deleteAboutBanner: (req, callback) => {
+    pool.query(
+      `delete from about where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
   deleteTestimonial: (req, callback) => {
     pool.query(
       `delete from testimonials where id =?`,
@@ -49,7 +61,6 @@ module.exports = {
             if (error) {
               return callback(error);
             }
-            console.log("banghghnerResult",results);
             return callback(null, results);
           }
         );
@@ -73,7 +84,7 @@ module.exports = {
       updateSection2: (data,callback) => {
         // console.log("data===",data);
         pool.query(
-          "UPDATE section2 SET title = ?,description = ?",
+          "UPDATE section2 SET `title` = ?,`description` = ? ",
           [data.title, data.description],
           (error, results, fields) => {
             if (error) {
@@ -137,7 +148,7 @@ module.exports = {
             if (error) {
               return callback(error);
             }
-            console.log("banghghnerResult",results);
+           
             return callback(null, results);
           }
         );
@@ -166,7 +177,7 @@ module.exports = {
             if (error) {
               return callback(error);
             }
-            console.log("banghghnerResult",results);
+          
             return callback(null, results);
           }
         );
@@ -182,7 +193,7 @@ module.exports = {
             if (error) {
               return callback(error);
             }
-            console.log("banghghnerResult",results);
+     
             return callback(null, results);
           }
         );
@@ -197,7 +208,7 @@ module.exports = {
             if (error) {
               return callback(error);
             }
-            console.log("banghghnerResult",results);
+        
             return callback(null, results);
           }
         );
@@ -212,7 +223,7 @@ module.exports = {
             if (error) {
               return callback(error);
             }
-            console.log("banghghnerResult",results);
+           
             return callback(null, results);
           }
         );
@@ -231,5 +242,342 @@ module.exports = {
           }
         )
       },
- 
+       
+   AllPaintingProjects: (callback) => {
+    pool.query(
+      `Select * from painting_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_painting_project: (req, callback) => {
+    pool.query(
+      `delete from painting_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  painting: (callback) => {
+    pool.query(
+      `Select * from painting_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  AllFabricationProjects: (callback) => {
+    pool.query(
+      `Select * from fabrication_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_fabrication_project: (req, callback) => {
+    pool.query(
+      `delete from fabrication_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  fabrication: (callback) => {
+    pool.query(
+      `Select * from fabrication_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+       
+        return callback(null, results);
+      }
+    );
+  },
+  AllDemolitionProjects: (callback) => {
+    pool.query(
+      `Select * from demolition_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_demolition_project: (req, callback) => {
+    pool.query(
+      `delete from demolition_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  demolition: (callback) => {
+    pool.query(
+      `Select * from demolition_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  AllErectionProjects: (callback) => {
+    pool.query(
+      `Select * from erection_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_erection_project: (req, callback) => {
+    pool.query(
+      `delete from erection_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+ erections: (callback) => {
+    pool.query(
+      `Select * from erection_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  AllCoatingProjects: (callback) => {
+    pool.query(
+      `Select * from coating_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_coating_project: (req, callback) => {
+    pool.query(
+      `delete from coating_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  coatings: (callback) => {
+    pool.query(
+      `Select * from coating_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  AllInsulationProjects: (callback) => {
+    pool.query(
+      `Select * from insulation_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_insulation_project: (req, callback) => {
+    pool.query(
+      `delete from insulation_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  insulations: (callback) => {
+    pool.query(
+      `Select * from insulation_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  AllFrpProjects: (callback) => {
+    pool.query(
+      `Select * from frp_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_frp_project: (req, callback) => {
+    pool.query(
+      `delete from frp_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  frp: (callback) => {
+    pool.query(
+      `Select * from frp_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  AllmanpowerProjects: (callback) => {
+    pool.query(
+      `Select * from manpower_projects`,
+
+      (error, results, fields) => {
+        console.log("projects",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        console.log("banghghnerResultdsgfgrer",results);
+        return callback(null, results);
+      }
+    );
+  },
+  delete_manpower_project: (req, callback) => {
+    pool.query(
+      `delete from manpower_projects where id =?`,
+      [req.params.id],
+      (error, results, fields) => {
+        if (error) {
+          callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
+  manpower: (callback) => {
+    pool.query(
+      `Select * from manpower_projects`,
+    
+
+      (error, results, fields) => {
+        console.log("image",results);
+   
+        if (error) {
+          return callback(error);
+        }
+        return callback(null, results);
+      }
+    );
+  },
 }

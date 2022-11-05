@@ -27,14 +27,14 @@ async function mainMail(firstname,lastname, email, message) {
     port: 465,
     secure: true,
     auth: {
-      user: "gourav.exergy@gmail.com",
-      pass: "qumxbyyzfyfazmyp",
+      user: "lashksonindia@gmail.com",
+      pass: "pqmsqeylqbtzptuw",
    
     },
   });
   const mailOption = {
     // from: "payal.exergy@gmail.com",
-    to: "gourav.exergy@gmail.com",
+    to: "lashksonindia@gmail.com",
     html: `You got a message from 
     Email : ${email}
     FirstName: ${firstname}
