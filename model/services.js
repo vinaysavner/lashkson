@@ -84,8 +84,8 @@ module.exports = {
       updateSection2: (data,callback) => {
         // console.log("data===",data);
         pool.query(
-          "UPDATE section2 SET `title` = ?,`description` = ? ",
-          [data.title, data.description],
+          "UPDATE section2 SET title = ?,description = ? ,title1 = ?,description1 = ?,title2 = ?,description2 = ?",
+          [data.title, data.description,data.title1, data.description1,data.title2, data.description2],
           (error, results, fields) => {
             if (error) {
               return callback(error);

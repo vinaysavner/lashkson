@@ -1,80 +1,580 @@
-<!--          
-          <div class="col-md-12">
-            <form class="form-horizontal" role="form" action="/project" enctype="multipart/form-data" method="post">
-              <div class="card card-default">
-                <div class="card-header">
-                  <h3 class="card-title">Create Recent Project</h3>
-                </div>
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
 
-                <div class="card-body">
-                  <div class="row">
-                    <div id="signupalert" class="alert alert-danger" style="display: none;">Error:</div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label for="exampleInputFile">Image</label>
-                        <div class="input-group">
-                          <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="exampleInputFile" name="upload_image">
-                            <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                          </div>
-                        </div>
-                        <div class="col-sm-12">
-                          <div class="form-group">
-                            <label>Title</label>
-                            <input class="form-control" name="title" type="text" placeholder="Title">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                 
+<head>
+  <title>Home</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Kanit:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Bree+Serif&family=Righteous&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css" integrity="sha384-z4tVnCr80ZcL0iufVdGQSUzNvJsKjEtqYZjiQrrYKlpGow+btDHDfQWkFjoaz/Zr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="/plugins/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/plugins/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <style>
+    .fa {
+      display: flex;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: xx-large;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      align-items: center;
+      justify-content: center;
+    }
+    .text-primary {
+    color: #068B78!important;
+}
+/* Slider */
+.carousel-item {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.prjct
+{
+  height:"90vh";
+  width:"90vh"
+}
+
+  </style>
+  <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="page">
+   
+    <header class="section page-header" style="position: relative">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap rd-navbar-absolute">
+        <nav class="rd-navbar rd-navbar-thin" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-fixed" data-xxl-layout="rd-navbar-static"
+          data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-main-outer">
+            <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-2"
+              data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></button>
+            <div class="rd-navbar-main">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle"
+                  data-rd-navbar-toggle="#rd-navbar-nav-wrap-1, #rd-navbar-hidden-1"><span></span></button>
+                <!-- RD Navbar Brand-->
+
+
+                <a class="rd-navbar-brand" href="/"><img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199"
+                    height="22" /></a>
+                <div class="rd-navbar-block" id="rd-navbar-hidden-1">
+                  <div class="rd-navbar-collapse">
+                    <ul class="list-inline-bordered rd-navbar-list">
+                      <li><span class="icon mdi mdi-comment-text-outline"></span><a href="/contact">Contact us</a></li>
+                      <li><span class="icon mdi mdi-cellphone-android"></span><a href="tel:#"> 7089999935,9148270108</a>
+                      </li>
+                    </ul>
                   </div>
-                
+                  <button class="rd-navbar-search-toggle"
+                    data-rd-navbar-toggle="#rd-navbar-search-1"><span></span></button>
                 </div>
-                <div class="card-footer">
-                  <button id="btn-signup" class="btn btn-info" type="submit"><i class="icon-hand-right"></i>
-                    &nbsp;Submit</button>
+              </div>
+              <!-- RD Navbar Search-->
+              <!-- <div class="rd-navbar-search" id="rd-navbar-search-1">
+                <form class="rd-search" action="#" data-search-live="rd-search-results-live-1" method="GET">
+                  <div class="form-wrap">
+                    <label class="form-label" for="rd-navbar-search-form-input-1">Search...</label>
+                    <input class="form-input rd-navbar-search-form-input" id="rd-navbar-search-form-input-1" type="text"
+                      name="s" autocomplete="off">
+                    <div class="rd-search-results-live" id="rd-search-results-live-1"></div>
+                  </div>
+                  <button class="rd-search-form-submit fa-search" type="submit"></button>
+                </form>
+              </div> -->
+              <%- include('../../nav_partials/nav') %>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- style="background: #f12711;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      "> -->
+<!-- Slider -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    <div>
+      <section class="section section-halfscreen bg-image" style="background: #FCF2DB;">
+        <div class="section-halfscreen-inner">
+          <!-- <% for(var i=0; i < banner.length; i++ ) { %> -->
+            <div class="section-halfscreen-image wow fadeIn" >
+              <div id="carousel" class="carousel slide" data-ride="carousel"  style="height: 100%;">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel" data-slide-to="1"></li>
+                  <li data-target="#carousel" data-slide-to="2"></li>
+                </ol> <!-- End of Indicators -->
+            
+                <!-- Carousel Content -->
+             
+                <div class="carousel-inner" style="height: 100%;" role="listbox">
+                  <% for(var i=0; i < banner.length; i++ ) { %>
+                  <div class="carousel-item  <% if(i==0){ %>active<% } %>"
+                 " style="background-image: url('/images/upload_banner_images/<%= banner[i].image%>');">
+                  </div> 
+                  <% } %>
                   
+                  <!-- End of Carousel Item -->
+            
+                  <!-- <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Bridge Picture</h3>
+                      <p>Awesome description for bridge.</p>
+                    </div>
+                  </div> 
+            
+                  <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_960_720.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h3>Flowers & Grass</h3>
+                      <p>Beauty of Flowers & Grass.</p>
+                    </div>
+                  </div>  -->
+                </div> <!-- End of Carousel Content -->
+            
+                <!-- Previous & Next -->
+                <a href="#carousel" class="carousel-control-prev" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+                <a href="#carousel" class="carousel-control-next" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only"></span>
+                </a>
+              </div> <!-- End of Carousel -->
+            </div>
+            <!-- <% } %> -->
+            
+              <div class="container">
 
+                <div class="row">
+                  <div class="col-md-6 col-lg-5">
+                    <div class="section-halfscreen-content">
+                      <div class="wow-outer heading-3">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s"  style="font-family: 'Kanit', sans-serif; color: rgb(0, 24, 131); text-shadow: 1px 1px rgb(12, 241, 58);"><span
+                            class="font-weight-bold">LASHKSON</span>
+                          </h2>
+                          <h5><span
+                            class="font-weight-bold sumbol text-primary"  style="font-family: 'Kanit', sans-serif; text-align: justify; "> Provides a wast range of Industrial maintenance like Fabrication jobs, penting jobs, waterproofing, Demolition,FRP coating jobs across india.</span></h5>
+                      </div>
+                      <div class="wow-outer p">
+                        <p class="custom-article wow fadeInDown" data-wow-delay=".2s"  style="color: rgb(0, 24, 131); font-family: 'Bree Serif', serif;  text-align: justify;font-size: x-large; ">  </p>
+                        <p class="custom-article wow fadeInDown" data-wow-delay=".2s"  style="color: rgb(0, 24, 131); font-family: 'Bree Serif', serif;  text-align: justify;font-size: larger; ">
+                       
+
+                        </p>
+                      </div><a class="button button-primary button-winona wow fadeIn" href="/about">Read More</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </form>
-            <div class="card">
-              <div class="card-header border-0">
-                <h3 class="card-title">Projects</h3>
+        </div>
+      </section>
+    </div>
+
+    <div class="tabs-horizontal"></div>
+    <section class="section section-lg bg-gray-100">
+      <div class="container">
+        <div class="row row-30">
+          <div class="col-sm-6 col-lg-4 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-minimal-icon linearicons-pie-chart wow fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" style="visibility: visible; animation-name: slideInDown; font-family: 'Kanit', sans-serif;"> <%= data[0].title%></h4>
+                <p class="wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall; font-family: 'Kanit', sans-serif;"> <%= data[0].description%></p>
               </div>
-              <div class="card-body table-responsive p-0">
-                <table class="table table-striped table-valign-middle">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>project</th>
-                      <th>title</th>
-           
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% if(data.length > 0){ %>
-                    <% for(var i=0; i < data.length; i++ ) { %>
-                    <tr>
-                      <td><%=i+1%></td>
-                      <td>
-                        <img width="100" src="/images/upload_project_images/<%= data[i].image %>" alt="Product 1" class="img">
-                        
-                      </td>
-                      <td><%= data[i].title %></td>
-                   
-                    </tr>
-                    <% } %>
-                    <% }else{ %>
-                      <tr>
-                        <td class="col-md-offset-3">No data found</td>
-                      </tr>
-                    <% } %>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-minimal-icon linearicons-briefcase wow fadeIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown; font-family: 'Kanit', sans-serif;"> <%= data[0].title1%></h4>
+                <p class="wow fadeInUpSmall" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUpSmall; font-family: 'Kanit', sans-serif;"> <%= data[0].description1%></p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-minimal-icon linearicons-credit-card wow fadeIn" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInDown; font-family: 'Kanit', sans-serif;"> <%= data[0].title2%></h4>
+                <p class="wow fadeInUpSmall" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpSmall; font-family: 'Kanit', sans-serif;"> <%= data[0].description%></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
-                  </tbody>
-                </table>
+    <!-- Small Features-->
+
+
+    <!-- Advantages and Achievements-->
+    <section class="section section-lg text-center">
+      <% for(var i=0; i < mission.length; i++ ) { %>
+        <div class="container">
+          <h3 class="wow-outer"  style="font-family: 'Kanit', sans-serif;"><span class="wow slideInUp fw-bolder">We Provide Maintainance Solutions for all Industries.</span></h3>
+          <p class="wow-outer"  style="font-family: 'Kanit', sans-serif;" ><span class="text-width-1 wow slideInDown fw-bolder fst-italic">This selection of
+              projects provides an insight into the diverse range of projects that have both challenged and excited us
+              in equal measure. We are not bound by any one architectural style and seek pragmatic solutions that not
+              only provide high quality designs.</span></p>
+          <div class="row row-50">
+            <div class="col-6 col-md-3 wow-outer">
+              <!-- Counter Minimal-->
+
+              <article class="counter-minimal wow slideInDown">
+                <div class="counter-minimal-icon linearicons-star"></div>
+                <div class="counter-minimal-main">
+
+                  <div class="counter" style="font-family: 'Kanit', sans-serif;">
+                    <%= mission[i].experience%>
+                  </div>
+
+                </div>
+                <h5 class="counter-minimal-title " style="font-family: 'Kanit', sans-serif;">Years of Experience</h5>
+              </article>
+            </div>
+            <div class="col-6 col-md-3 wow-outer">
+              <!-- Counter Minimal-->
+              <article class="counter-minimal wow slideInDown">
+                <div class="counter-minimal-icon linearicons-folder"></div>
+                <div class="counter-minimal-main">
+
+                  <div class="counter"  style="font-family: 'Kanit', sans-serif;">
+                    <%= mission[i].work_facilities%>
+                  </div>
+                </div>
+                <h5 class="counter-minimal-title " style="font-family: 'Kanit', sans-serif;">Work Facilities</h5>
+              </article>
+            </div>
+            <div class="col-6 col-md-3 wow-outer">
+              <!-- Counter Minimal-->
+              <article class="counter-minimal wow slideInDown">
+                <div class="counter-minimal-icon linearicons-flag"></div>
+                <div class="counter-minimal-main">
+                  <div class="counter " style="font-family: 'Kanit', sans-serif;">
+                    <%= mission[i].engineers%>
+                  </div>
+                </div>
+                <h5 class="counter-minimal-title" style="font-family: 'Kanit', sans-serif;">Qualified Engineers</h5>
+              </article>
+            </div>
+            <div class="col-6 col-md-3 wow-outer">
+              <!-- Counter Minimal-->
+              <article class="counter-minimal wow slideInDown">
+                <div class="counter-minimal-icon linearicons-lamp"></div>
+                <div class="counter-minimal-main">
+                  <div class="counter " style="font-family: 'Kanit', sans-serif;">
+                    <%= mission[i].projects%>
+                  </div>
+
+                </div>
+                <h5 class="counter-minimal-title" style="font-family: 'Kanit', sans-serif;">Completed Projects</h5>
+              </article>
+
+
+            </div>
+          </div>
+          <% } %>
+
+        </div>
+    </section>
+    <!-- CTA Thin-->
+    <section class="section section-xs bg-primary-darken text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-sm-10 col-md-12">
+            <div class="box-cta-thin">
+              <h4 class="title wow-outer"  style="font-family: 'Kanit', sans-serif;"><span class="wow slideInRight" >Helping Business Owners Worldwide</span></h4>
+              <div class="wow-outer button-outer"><a class="button button-white-outline button-winona wow slideInLeft"
+                  href="/contact" >Get in Touch</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services-->
+    <section class="section section-lg bg-gray-100 text-center">
+      <div class="container">
+        <h3 class="wow-outer"  style="font-family: 'Kanit', sans-serif;"><span class="wow slideInUp" ><b> Our Services</b></span></h3>
+        <div class="row row-30">
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown" >
+              
+              <div class="">
+                <a href="/paintings"> <img src="/images/icons/icons8-paint-brush-64 (1).png" height="100px" width="100px" alt=""></a>
+          
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/paintings">Painting</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;">PU coats, Bitumen Coats, 1,2,3, Coat Services. </p>
+         
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown" data-wow-delay=".05s">
+              <div>
+                <a href="/fabrications"> <img src="/images/icons/icons8-gun-64.png" height="100px" width="100px" alt=""></a>
+               
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/fabrications">Fabrication</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;"> Fabrication of structure , tank and pipeline. </p>
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown" data-wow-delay=".1s">
+              <div>
+                <a href="/demolition_services"><img src="/images/fabrication/Untitled.png" height="100px" width="100px" alt=""></a>
+                
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/demolition_services">Demolition services</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;"> All kind of MS and RCC Structure. </p>
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown">
+                 <div>
+                  <a href="/erection"><img src="/images/icons/icons8-constructing-100.png" height="100px" width="100px" alt=""></a>
+                
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/erection">Erection</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;">All type of pumps, motor, gear Box Erection and fitting. </p>
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown">
+                 <div>
+                  <a href="/insulation"><img src="/images/icons/icons8-heating-radiator-48.png" height="100px" width="100px" alt=""></a>
+                
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/insulation">Hot & Cold Insulation</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;"> Wool, dry air, plastics, and polystyrene foam are all examples of good
+                insulators. </p>
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown">
+                 <div>
+                  <a href="/coating"> <img src="/images/icons/icons8-spray-gun-64.png" height="100px" width="100px" alt=""></a>
+               
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/coating">Coating Services</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;">High Temperature Coatingt & Aluminium Paints. </p>
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown">
+                 <div>
+                  <a href="/frp_jobs"> <img src="/images/icons/icons8-silo-64.png" height="100px" width="100px" alt=""></a>
+               
+              </div>
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/frp_jobs">FRP Coting Jobs</a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;"> All type of tanks & pipeline.</p>
+            </article>
+          </div>
+          <div class="col-sm-3 col-lg-4 wow-outer">
+            <!-- Box Creative-->
+            <article class="box-creative wow slideInDown">
+                 <div>
+                  <a href="/manpower_services"><img src="/images/icons/workers.png" height="100px" width="100px" alt=""></a>
+                
+              </div>
+
+              <h4 class="box-creative-title" style="font-family: 'Kanit', sans-serif;"><a href="/manpower_services">Manpower Services </a></h4>
+              <p class="fw-bolder fw-bolder" style="font-family: 'Kanit', sans-serif;">Weldor/Fitter,Helper,Fourth Man (Unskilled,Semiskilled & Skilled)</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recent Projects-->
+    <section class="section section-lg text-center">
+      <div class="container">
+        <h3 class="wow-outer" style="font-family: 'Kanit', sans-serif;"><span class="wow slideInDown">Recent Projects</span></h3>
+        <div class="row row-30">
+
+          <% for(var i=0; i < recent_projects.length; i++ ) { %>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Post Tiny-->
+
+              <article class="post-tiny wow fadeSlideInDown"><a class="post-tiny-media" href="#">
+                <div class="prjct">
+                  <img
+                  src='/images/upload_recent_project_images/<%=recent_projects[i].image%>' alt="" width="270px" height="270px"
+                 />
+                </div></a>
+                <h5 class="post-tiny-title"><a href="#">
+                    <%- recent_projects[i].title %>
+                  </a></h5>
+                <!-- <time class="post-tiny-time" datetime="2017">2 days ago</time> -->
+              </article>
+
+            </div>
+            <% } %>
+
+        </div>
+        <div class="wow-outer button-outer offset-top-2"><a
+            class="button button-dark-outline button-winona wow slideInUp" href="/projects">View all projects</a></div>
+      </div>
+    </section>
+    <!-- A Few Words About Us-->
+    <section class="section bg-gray-100">
+      <div class="range justify-content-xl-between">
+        <div class="cell-lg-6 cell-xl-5 align-self-center container">
+          <div class="row">
+            <div class="col-md-10 cell-inner">
+              <div class="section-lg inset-right-2">
+                <h3 class="wow-outer" style="font-family: 'Kanit', sans-serif;"><span class="wow slideInDown" ><b>OUR SKILL AND EXPERTISE</b>
+                  </span></h3>
+                <!-- <h4 class="wow fadeIn">Expertise, discipline and precision</h1> -->
+                <p class="wow fadeIn" style="font-family: 'Kanit', sans-serif; text-align: justify;" > <b>lashkson has a staff of around 90 people including engineering , Fabrication , Skilled work Man ,Painting Workman having a Speciality of work at Height Jobs.This gives us the flexibility in providing Industry to complete their shutdown critical jobs on time with Safety & Guidance.lashkson has a strong reputation as being a competent and professionalproject.</b>
+
+                </p>
+                <div class="progress-linear-outer wow-outer">
+                  <!-- Linear progress bar-->
+                  <article class="progress-linear wow slideInDown" data-wow-delay=".05s">
+                    <div class="progress-header">
+                      <p>Architecture</p><span class="progress-value">92</span>
+                    </div>
+                    <div class="progress-bar-linear-wrap">
+                      <div class="progress-bar-linear"></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="progress-linear-outer wow-outer">
+                  <!-- Linear progress bar-->
+                  <article class="progress-linear progress-linear-color-1 wow slideInDown" data-wow-delay="0.10s">
+                    <div class="progress-header">
+                      <p>Building</p><span class="progress-value">95</span>
+                    </div>
+                    <div class="progress-bar-linear-wrap">
+                      <div class="progress-bar-linear"></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="progress-linear-outer wow-outer">
+                  <!-- Linear progress bar-->
+                  <article class="progress-linear progress-linear-color-2 wow slideInDown" data-wow-delay=".15s">
+                    <div class="progress-header">
+                      <p>Construction</p><span class="progress-value">96</span>
+                    </div>
+                    <div class="progress-bar-linear-wrap">
+                      <div class="progress-bar-linear"></div>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
-          </div> -->
+          </div>
+        </div>
+        <div class="cell-lg-6 height-fill">
+          <div class="figure-card">
+            <div class="figure-card-sizer"></div><img src="/images/pexels-uğur-bozdoğan-5759611.jpg" alt="" width="960"
+              height="762" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partners-->
 
-          <!-- paintings projects -->
+    <!-- Page Footer-->
+    <footer class="section footer-minimal bg-primary-darken">
+      <div class="container">
+        <div class="footer-minimal-inner"><a class="brand" href="/"><img src="/images/LASHKSON LOGO PNG (1).png" alt=""
+              width="199" height="22" /></a>
+          <!-- Rights-->
+
+          <p class="rights"  style="font-family: 'Kanit', sans-serif; text-align: justify;" ><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. LASHKSON
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+  </div>
+  <div class="preloader">
+
+    <div class="preloader-logo">
+      <img src="/images/LASHKSON LOGO PNG (1).png" alt="" width="199" height="22" </div>
+      <!-- <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        
+        </div>
+      </div> -->
+    </div>
+    <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0"  id="ui-to-top" class="ui-to-top fa fa-whatsapp active"></a>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- <a href="//web.whatsapp.com/send?phone=9977776189&text&app_absent=0" class="fa fa-whatsapp active">Send Message</a> -->
+    <!--coded by Starlight-->
+    
+
+    <!-- <a href="//web.whatsapp.com/send?phone=9977776189&text&app_absent=0" id ="ui-to-top" target="_blank" class="ui-to-top fa fa-whatsapp active"></a> -->
+    <!-- <a href="//web.whatsapp.com/send?phone=9148270108&text&app_absent=0" class="ui-to-top fa fa-whatsapp active"></a> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+      <!-- <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" id ="ui-to-top" target="_blank"
+      class="ui-to-top fa fa-whatsapp active"></a> -->
+  
+      <!-- <a href="//web.whatsapp.com/send?phone=7089999935&text&app_absent=0" target="_blank" class="ui-to-top ">
+        <i class="fa fa-whatsapp active"></i>
+        </a> -->
+</body>
+
+</html>

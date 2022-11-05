@@ -212,35 +212,43 @@
     </div>
 
     <div class="tabs-horizontal"></div>
-
     <section class="section section-lg bg-gray-100">
       <div class="container">
-
         <div class="row row-30">
-          <% for(var i=0; i < data.length; i++ ) { %>
-            <div class="col-sm-6 col-lg-4 wow-outer">
-
-              <article class="box-minimal">
-                <div class="box-minimal-icon linearicons-pie-chart wow fadeIn"></div>
-                <div class="box-minimal-main wow-outer">
-
-                  <h4 style="text-align: justify; font-family: 'Kanit', sans-serif;"  class="box-minimal-title wow slideInDown f"><b>
-                      <%= data[i].title%>
-                    </b></h4>
-                  <p style="text-align: justify; font-family: 'Kanit', sans-serif; "  class="wow fadeInUpSmall f f">
-                    <%= data[i].description%>
-                  </p>
-
-                </div>
-              </article>
-
-
-            </div>
-            <% } %>
+          <div class="col-sm-6 col-lg-4 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-minimal-icon linearicons-pie-chart wow fadeIn" style="visibility: visible; animation-name: fadeIn;"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" style="visibility: visible; animation-name: slideInDown; font-family: 'Kanit', sans-serif;"> <%= data[0].title%></h4>
+                <p class="wow fadeInUpSmall" style="visibility: visible; animation-name: fadeInUpSmall; font-family: 'Kanit', sans-serif;"> <%= data[0].description%></p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-minimal-icon linearicons-briefcase wow fadeIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: slideInDown; font-family: 'Kanit', sans-serif;"> <%= data[0].title1%></h4>
+                <p class="wow fadeInUpSmall" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUpSmall; font-family: 'Kanit', sans-serif;"> <%= data[0].description1%></p>
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-6 col-lg-4 wow-outer">
+            <!-- Box Minimal-->
+            <article class="box-minimal">
+              <div class="box-minimal-icon linearicons-credit-card wow fadeIn" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;"></div>
+              <div class="box-minimal-main wow-outer">
+                <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: slideInDown; font-family: 'Kanit', sans-serif;"> <%= data[0].title2%></h4>
+                <p class="wow fadeInUpSmall" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUpSmall; font-family: 'Kanit', sans-serif;"> <%= data[0].description%></p>
+              </div>
+            </article>
+          </div>
         </div>
-
       </div>
     </section>
+
 
     <!-- Small Features-->
 
