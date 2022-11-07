@@ -7,7 +7,7 @@ const session = require('express-session')
 
 
 module.exports = {
-  login: (req, res, next) => {
+  login: (req, res, next) => { 
     if (req.body.email == '' || req.body.password == '') {
       console.log("email", req.body.email);
 
