@@ -547,6 +547,268 @@
           </div>
         </div>
       </div>
+      
+      <div class="col-md-12">
+        <form class="form-horizontal" role="form" action="/coating_project" enctype="multipart/form-data" method="post">
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Create Coating Project</h3>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div id="signupalert" class="alert alert-danger" style="display: none;">Error:</div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="exampleInputFile">Image</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile" name="upload_coating_image">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <input class="form-control" name="title" type="text" placeholder="Title">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Description</label>
+                        <input class="form-control" name="description" type="text" placeholder="Description">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+              </div>
+            
+            </div>
+            <div class="card-footer">
+              <button id="btn-signup" class="btn btn-info" type="submit"><i class="icon-hand-right"></i>
+                &nbsp;Submit</button>
+              
+
+          </div>
+        </form>
+        <div class="card">
+          <div class="card-header border-0">
+            <h3 class="card-title">Coating Projects</h3>
+          </div>
+          <div class="card-body table-responsive p-0">
+            <table class="table table-striped table-valign-middle">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>project</th>
+                  <th>title</th>
+                  <th>description</th>
+       
+                </tr>
+              </thead>
+              <tbody>
+                <% if(coating.length > 0){ %>
+                <% for(var i=0; i < coating.length; i++ ) { %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td>
+                    <img width="100" src="/images/upload_coating_images/<%= coating[i].image %>" alt="Product 1" class="img">
+                    
+                  </td>
+                  <td><%= coating[i].title %></td>
+                  <td><%= coating[i].description %></td>
+                  <td>
+                    <a href="/delete/coating/<%=coating[i].id%>" class="btn btn-primary btn sm">Delete</a>
+                  </td>
+                </tr>
+                <% } %>
+                <% }else{ %>
+                  <tr>
+                    <td class="col-md-offset-3">No data found</td>
+                  </tr>
+                <% } %>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <form class="form-horizontal" role="form" action="/frp_project" enctype="multipart/form-data" method="post">
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Create Frp Project</h3>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div id="signupalert" class="alert alert-danger" style="display: none;">Error:</div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="exampleInputFile">Image</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile" name="upload_frp_image">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <input class="form-control" name="title" type="text" placeholder="Title">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Description</label>
+                        <input class="form-control" name="description" type="text" placeholder="Description">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+              </div>
+            
+            </div>
+            <div class="card-footer">
+              <button id="btn-signup" class="btn btn-info" type="submit"><i class="icon-hand-right"></i>
+                &nbsp;Submit</button>
+              
+
+          </div>
+        </form>
+        <div class="card">
+          <div class="card-header border-0">
+            <h3 class="card-title">FRP Projects</h3>
+          </div>
+          <div class="card-body table-responsive p-0">
+            <table class="table table-striped table-valign-middle">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>project</th>
+                  <th>title</th>
+                  <th>description</th>
+       
+                </tr>
+              </thead>
+              <tbody>
+                <% if(frp.length > 0){ %>
+                <% for(var i=0; i < frp.length; i++ ) { %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td>
+                    <img width="100" src="/images/upload_frp_images/<%= frp[i].image %>" alt="Product 1" class="img">
+                    
+                  </td>
+                  <td><%= frp[i].title %></td>
+                  <td><%= frp[i].description %></td>
+                  <td>
+                    <a href="/delete/frp/<%=frp[i].id%>" class="btn btn-primary btn sm">Delete</a>
+                  </td>
+                </tr>
+                <% } %>
+                <% }else{ %>
+                  <tr>
+                    <td class="col-md-offset-3">No data found</td>
+                  </tr>
+                <% } %>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <form class="form-horizontal" role="form" action="/manpower_project" enctype="multipart/form-data" method="post">
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Create Manpower Project</h3>
+            </div>
+
+            <div class="card-body">
+              <div class="row">
+                <div id="signupalert" class="alert alert-danger" style="display: none;">Error:</div>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="exampleInputFile">Image</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile" name="upload_manpower_image">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <input class="form-control" name="title" type="text" placeholder="Title">
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Description</label>
+                        <input class="form-control" name="description" type="text" placeholder="Description">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             
+              </div>
+            
+            </div>
+            <div class="card-footer">
+              <button id="btn-signup" class="btn btn-info" type="submit"><i class="icon-hand-right"></i>
+                &nbsp;Submit</button>
+              
+
+          </div>
+        </form>
+        <div class="card">
+          <div class="card-header border-0">
+            <h3 class="card-title">Manpower Projects</h3>
+          </div>
+          <div class="card-body table-responsive p-0">
+            <table class="table table-striped table-valign-middle">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>project</th>
+                  <th>title</th>
+                  <th>description</th>
+       
+                </tr>
+              </thead>
+              <tbody>
+                <% if(manpower.length > 0){ %>
+                <% for(var i=0; i < manpower.length; i++ ) { %>
+                <tr>
+                  <td><%=i+1%></td>
+                  <td>
+                    <img width="100" src="/images/upload_manpower_images/<%= manpower[i].image %>" alt="Product 1" class="img">
+                    
+                  </td>
+                  <td><%= manpower[i].title %></td>
+                  <td><%= manpower[i].description %></td>
+                  <td>
+                    <a href="/delete/manpower/<%=manpower[i].id%>" class="btn btn-primary btn sm">Delete</a>
+                  </td>
+                </tr>
+                <% } %>
+                <% }else{ %>
+                  <tr>
+                    <td class="col-md-offset-3">No data found</td>
+                  </tr>
+                <% } %>
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
     </section>
