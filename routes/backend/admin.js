@@ -20,8 +20,8 @@ router.get('/projects',backendController.getProjects);//to render users profile
 router.get('/recent_project', backendController.Projects);//call for main index page
 router.post('/recent_project', backendController.Projects);//call for signup post 
 router.get('/recent_project',backendController.getRecentProject);//to render users profile
-router.get('/about', backendController.aboutUs);//call for main index page
-router.post('/about', backendController.getAboutus);//call for signup post 
+router.post('/about', backendController.aboutUs);//call for main index page
+router.get('/about',backendController.getAboutus);//call for signup post 
 router.get("/about/delete/:id",backendController.deleteAboutBanner)
 router.post("/updateSection2",backendController.updateSection2)
 router.post("/updateMission",backendController.updateMission)

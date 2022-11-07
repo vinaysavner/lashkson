@@ -37,13 +37,25 @@
                         <label for="exampleInputFile">Image</label>
                         <div class="input-group">
                           <div class="custom-file">
-                            <input class="form-control" accept="" name="uploaded" type="file">
+                            <input type="file" class="custom-file-input" id="exampleInputFile" name="uploaded">
+
                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                           </div>
                         </div>
                       </div>
                     </div>
-                    
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Title</label>
+                        <input class="form-control" name="title" type="text" placeholder="Title">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Founder</label>
+                        <input class="form-control" name="founder" type="text" placeholder="Founder">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="card-footer">
@@ -62,6 +74,8 @@
                     <tr>
                       <th>#</th>
                       <th>About Banner image</th>
+                      <th>Title</th>
+                      <th>Founder</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -73,7 +87,13 @@
                         <img width="100" src="/images/upload_about_images/<%= data[i].image %>" alt="Product 1" class="img">
                       </td>
                       <td>
-                        <a href="/delete/about/<%=data[i].id%>" class="btn btn-primary btn sm">Delete</a>
+                        <%=data[i].title%>
+                      </td>
+                      <td>
+                        <%=data[i].founder%>
+                      </td>
+                      <td>
+                        <a href="/about/delete/<%=data[i].id%>" class="btn btn-primary btn sm">Delete</a>
                       </td>
                     </tr>
                     <% } %>

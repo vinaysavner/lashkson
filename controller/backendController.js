@@ -297,15 +297,16 @@ module.exports = {
     });
   },
 
-
-  //About Us
   aboutUs: function (req, res) {
     message = '';
     if (req.method == "POST") {
+     
+   
       var post = req.body;
-      var title = post.title;
-      var founder = post.description;
+      console.log('abouttttttttttttttttttttttttttt',req.files);return;
 
+      var title = post.title;
+      var founder = post.founder;
 
       if (!req.files)
         return res.status(400).send('No files were uploaded.');
@@ -330,6 +331,39 @@ module.exports = {
       res.render('pages/backend/about');
     }
   },
+
+  //About Us
+  // aboutUs: function (req, res) {
+  //   message = '';
+  //   if (req.method == "POST") {
+  //     var post = req.body;
+  //     var title = post.title;
+  //     var founder = post.founder;
+
+
+  //     if (!req.files)
+  //       return res.status(400).send('No files were uploaded.');
+  //     var file = req.files.uploaded;
+  //     var img_name = file.name;
+  //     if (file.mimetype == "image/jpeg" || file.mimetype == "image/png" || file.mimetype == "image/gif") {
+
+  //       file.mv('public/images/upload_about_images/' + file.name, function (err) {
+
+  //         if (err)
+  //           return res.status(500).send(err);
+  //         var sql = "INSERT INTO `about`(`image`,`title`,`founder`) VALUES ('" + img_name + "','" + title + "','" + founder + "')";
+  //         var query = pool.query(sql, function (err, result) {
+  //           res.redirect('profile/' + result.insertId);
+  //         });
+  //       });
+  //     } else {
+  //       message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
+  //       res.render('pages/backend/about', { message: message });
+  //     }
+  //   } else {
+  //     res.render('pages/backend/about');
+  //   }
+  // },
   getAboutus: function (req, res) {
     var message = '';
     var id = req.params.id;
