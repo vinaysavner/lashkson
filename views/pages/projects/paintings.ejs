@@ -88,6 +88,7 @@
             <div class="row">
          
                <div class="col-md-12">
+                  <% if(data.length != 0){ %>
                   <div id="proj" class="carousel slide projects_ban" data-ride="carousel">
                      <ol class="carousel-indicators">
                         <li data-target="#proj" data-slide-to="0" class="active"></li>
@@ -135,6 +136,11 @@
                            </div>
                          
                   </div>
+                  <% }else{ %>
+                     <div class="carousel slide projects_ban" >
+                        <h6>No Dta Found</h6>                            
+                      </div>
+                   <% } %>
                </div>
              
             </div>
@@ -143,7 +149,7 @@
 
 
       <!-- Page Footer-->
-      <footer class="section footer-minimal bg-primary-darken">
+      <footer class="section footer-minimal bg-primary-darken" >
          <div class="container">
             <div class="footer-minimal-inner"><a class="brand" href="/"><img src="/images/LASHKSON LOGO PNG (1).png"
                      alt="" width="199" height="22" /></a>
