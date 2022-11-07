@@ -303,7 +303,7 @@ module.exports = {
      
    
       var post = req.body;
-      console.log('abouttttttttttttttttttttttttttt',req.files);return;
+      console.log('abouttttttttttttttttttttttttttt',req.files);
 
       var title = post.title;
       var founder = post.founder;

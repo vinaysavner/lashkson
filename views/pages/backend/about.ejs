@@ -22,11 +22,13 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
+         
+
           <div class="col-md-6">
             <form class="form-horizontal" role="form" action="/about" enctype="multipart/form-data" method="post">
               <div class="card card-default">
                 <div class="card-header">
-                  <h3 class="card-title">Create</h3>
+                  <h3 class="card-title">Create About Page</h3>
                 </div>
 
                 <div class="card-body">
@@ -38,75 +40,79 @@
                         <div class="input-group">
                           <div class="custom-file">
                             <input type="file" class="custom-file-input" id="exampleInputFile" name="uploaded">
-
                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label>Title</label>
+                            <input class="form-control" name="client_name" type="text" placeholder="Title">
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label>Founder</label>
+                            <input class="form-control" name="feedback" type="text" placeholder="Founder">
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Title</label>
-                        <input class="form-control" name="title" type="text" placeholder="Title">
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                        <label>Founder</label>
-                        <input class="form-control" name="founder" type="text" placeholder="Founder">
-                      </div>
-                    </div>
+                   
                   </div>
+                
                 </div>
                 <div class="card-footer">
                   <button id="btn-signup" class="btn btn-info" type="submit"><i class="icon-hand-right"></i>
                     &nbsp;Submit</button>
+                  
+                </div>
+                <div class="card">
+                  <div class="card-header border-0">
+                    <h3 class="card-title">About Us</h3>
+                  </div>
+                  <div class="card-body table-responsive p-0">
+                    <table class="table table-striped table-valign-middle">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>About Image</th>
+                          <th>About Title</th>
+                          <th>Founder</th>
+               
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% if(data.length > 0){ %>
+                        <% for(var i=0; i < data.length; i++ ) { %>
+                        <tr>
+                          <td><%=i+1%></td>
+                          <td>
+                            <img width="100" src="/images/upload_about_images/<%= data[i].image %>" alt="Product 1" class="img">
+                          </td>
+                          <td>
+                            <%=data[i].title%>
+                          </td>
+                          <td>
+                            <%=data[i].founder%>
+                          </td>
+                          <td>
+                            <a href="/about/delete/<%=data[i].id%>" class="btn btn-primary btn sm">Delete</a>
+                          </td>
+                        </tr>
+                        <% } %>
+                        <% }else{ %>
+                          <tr>
+                            <td class="col-md-offset-3">No data found</td>
+                         
+                          </tr>
+                        <% } %>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </form>
-            <div class="card">
-              <div class="card-header border-0">
-                <h3 class="card-title"><B>About Banner</B></h3>
-              </div>
-              <div class="card-body table-responsive p-0">
-                <table class="table table-striped table-valign-middle">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>About Banner image</th>
-                      <th>Title</th>
-                      <th>Founder</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <% if(data.length > 0){ %>
-                    <% for(var i=0; i < data.length; i++ ) { %>
-                    <tr>
-                      <td><%=i+1%></td>
-                      <td>
-                        <img width="100" src="/images/upload_about_images/<%= data[i].image %>" alt="Product 1" class="img">
-                      </td>
-                      <td>
-                        <%=data[i].title%>
-                      </td>
-                      <td>
-                        <%=data[i].founder%>
-                      </td>
-                      <td>
-                        <a href="/about/delete/<%=data[i].id%>" class="btn btn-primary btn sm">Delete</a>
-                      </td>
-                    </tr>
-                    <% } %>
-                    <% }else{ %>
-                      <tr>
-                        <td class="col-md-offset-3">No data found</td>
-                     
-                      </tr>
-                    <% } %>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            
           </div>
         <!-- Testimonials -->
           <div class="col-md-6">
