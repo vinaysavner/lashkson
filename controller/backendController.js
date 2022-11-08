@@ -454,64 +454,7 @@ module.exports = {
     });
   },
 
-  // painting projects
-
-  PaintingProjects: function (req, res) {
-    message = '';
-    if (req.method == "POST") {
-      var post = req.body;
-      var title = post.title;
-      var description = post.description;
-
-      if (!req.files)
-        return res.status(400).send('No files were uploaded.');
-      var file = req.files.upload_painting_image;
-      var img_name = file.name;
-      if (file.mimetype == "image/jpeg" || file.mimetype == "image/png" || file.mimetype == "image/gif") {
-
-        file.mv('public/images/upload_painting_images/' + file.name, function (err) {
-
-          if (err)
-            return res.status(500).send(err);
-          var sql = "INSERT INTO `painting_projects`(`image`,`title`,`description`) VALUES ('" + img_name + "','" + title + "','" + description + "')";
-          var query = pool.query(sql, function (err, result) {
-            res.redirect('profile/' + result.insertId);
-          });
-        });
-      } else {
-        message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
-        res.render('pages/backend/project', { message: message });
-      }
-    } else {
-      res.render('pages/backend/project');
-    }
-  },
-  getPaintingProjects: function (req, res) {
-    var message = '';
-    // var id = req.params.id;
-    var sql = "SELECT * FROM `painting_projects`";
-    pool.query(sql, function (err, result) {
-      if (result.length <= 0)
-        message = "Profile not found!";
-
-      res.render('pages/backend/project', { data: result, message: message });
-    });
-  },
-  AllPaintingProjects: (req, res, next) => {
-    AllPaintingProjects((err, results) => {
-      console.log("ppppppppret4etppp", results)
-      if (err) {
-        console.log(err);
-        // res.send(err.message)
-
-        return;
-      }
-      console.log("resssssss=>>>>>", results);
-      // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-      res.render("pages/backend/project", { title: "Express", data: results });
-    });
-
-  },
+ 
   Project: (req, res, next) => {
     AllPaintingProjects((err, painting) => {
       console.log("ppppppppret4etppp", painting)
@@ -577,7 +520,7 @@ module.exports = {
 
                       return;
                     }
-                    res.render("pages/backend/projects", { title: "Express", painting: painting, fabrication: fabrication, demolition: demolition, erection: erection, coating: coating, insulation: insulation, frp: frp, manpower: manpower, active_nav: "home" });
+                    res.render("pages/backend/project", { title: "Express", painting: painting, fabrication: fabrication, demolition: demolition, erection: erection, coating: coating, insulation: insulation, frp: frp, manpower: manpower, active_nav: "home" });
                   });
                 });
               });
@@ -587,6 +530,64 @@ module.exports = {
       });
     });
   },
+   // painting projects
+
+   PaintingProjects: function (req, res) {
+    message = '';
+    if (req.method == "POST") {
+      var post = req.body;
+      var title = post.title;
+      var description = post.description;
+
+      if (!req.files)
+        return res.status(400).send('No files were uploaded.');
+      var file = req.files.upload_painting_image;
+      var img_name = file.name;
+      if (file.mimetype == "image/jpeg" || file.mimetype == "image/png" || file.mimetype == "image/gif") {
+
+        file.mv('public/images/upload_painting_images/' + file.name, function (err) {
+
+          if (err)
+            return res.status(500).send(err);
+          var sql = "INSERT INTO `painting_projects`(`image`,`title`,`description`) VALUES ('" + img_name + "','" + title + "','" + description + "')";
+          var query = pool.query(sql, function (err, result) {
+            res.redirect('profile/' + result.insertId);
+          });
+        });
+      } else {
+        message = "This format is not allowed , please upload file with '.png','.gif','.jpg'";
+        res.render('pages/backend/project', { message: message });
+      }
+    } else {
+      res.render('pages/backend/project');
+    }
+  },
+  getPaintingProjects: function (req, res) {
+    var message = '';
+    // var id = req.params.id;
+    var sql = "SELECT * FROM `painting_projects`";
+    pool.query(sql, function (err, result) {
+      if (result.length <= 0)
+        message = "Profile not found!";
+
+      res.render('pages/backend/project', { data: result, message: message });
+    });
+  },
+  AllPaintingProjects: (req, res, next) => {
+    AllPaintingProjects((err, results) => {
+      console.log("ppppppppret4etppp", results)
+      if (err) {
+        console.log(err);
+        // res.send(err.message)
+
+        return;
+      }
+      console.log("resssssss=>>>>>", results);
+      // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
+      res.render("pages/backend/project", { title: "Express", data: results });
+    });
+
+  },
   delete_painting_project: (req, res, next) => {
     delete_painting_project(req, (err, painting) => {
       // console.log(results);
@@ -594,7 +595,7 @@ module.exports = {
         // console.log(err);
         return;
       }
-      res.render("pages/backend/projects");
+      res.render("pages/backend/project");
     });
   },
 

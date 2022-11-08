@@ -38,7 +38,7 @@ router.get("/recent_project/delete/:id",backendController.deleteRecentProjects)
 router.get("/painting_projects",backendController.AllPaintingProjects)//call for main index page
 router.post('/painting_project', backendController.PaintingProjects);//call for signup post 
 router.get('/painting_project',backendController.getPaintingProjects);
-router.get("/delete/:id",backendController.delete_painting_project)
+router.get("/delete/painting/:id",backendController.delete_painting_project)
 
 //fabrication projects
 router.get("/fabrication_projects",backendController.AllFabricationProjects)//call for main index page
