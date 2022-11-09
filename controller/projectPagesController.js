@@ -45,7 +45,7 @@ module.exports = {
         demolition((err,results) => {
           var arrdata = [];
           const chunkSize = 3;
-          for (let i = 0; i < results.length; i += chunkSize) {
+          for (let i =   0; i < results.length; i += chunkSize) {
               const chunk = results.slice(i, i + chunkSize);
               // arrdata[i] = Object.entries(chunk);
               arrdata.push(chunk);
