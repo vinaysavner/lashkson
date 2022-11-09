@@ -108,7 +108,7 @@ module.exports = {
       }
       console.log("resssssss=>>>>>", results);
       // var imgsrc = 'process.env.baseUrl' + req.file.baseUrl
-      res.render("pages/backend/projects", { title: "Express", data: results });
+      res.render("pages/backend/project", { title: "Express", data: results });
     });
 
   },
