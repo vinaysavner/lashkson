@@ -520,7 +520,7 @@ module.exports = {
 
                       return;
                     }
-                    res.render("pages/backend/project", { title: "Express", painting: painting, fabrication: fabrication, demolition: demolition, erection: erection, coating: coating, insulation: insulation, frp: frp, manpower: manpower, active_nav: "home" });
+                    res.render("pages/backend/project",{ title: "Express", painting: painting, fabrication: fabrication, demolition: demolition, erection: erection, coating: coating, insulation: insulation, frp: frp, manpower: manpower, active_nav: "home" });
                   });
                 });
               });
