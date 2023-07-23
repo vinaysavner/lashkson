@@ -20,6 +20,7 @@ const project_pagesRouter = require("./routes/project_pages");
 const aboutRouter = require("./routes/about");
 const adminRouter = require("./routes/backend/admin");
 
+//nodemailer mail
 async function mainMail(firstname,lastname, email, message) {
   const transporter = await nodemailer.createTransport({
     service: "gmail",
